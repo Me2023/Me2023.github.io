@@ -4,12 +4,20 @@
     <title>关系和有向图 Relations and Digraphs</title>
     <url>/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/</url>
     <content><![CDATA[<ul>
-<li><em>笛卡尔积 product set&#x2F;Cartesian product</em><ul>
+<li><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em><ul>
 <li>$A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$</li>
 </ul>
 </li>
+<li><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></li>
+<li><strong>关系</strong> <em>(relation)</em><ul>
+<li>A <strong>relation</strong> $R$ from $A$ to $B$ is a subset of $A\times B$. </li>
+<li>If $R\subset A\times B$ and $(a,b)\in R$, we say that $a$ <strong>is related to</strong> $b$ <strong>by</strong> $R$, and we also write $a\ R\ b$.</li>
+<li>$R\subset A\times A$ <strong>is a relation on</strong> $A$.</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">function</span>(<span class="params">x</span>):</span><br><span class="line">    x = <span class="number">1</span></span><br></pre></td></tr></table></figure>]]></content>
+</li>
+<li><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">function</span>(<span class="params">x</span>):</span><br><span class="line">    x = <span class="number">1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
       <categories>
         <category>CS相关数理基础</category>
       </categories>
