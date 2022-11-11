@@ -22,26 +22,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"me2023.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="诗酒趁年华">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一隅世界">
-<meta property="og:url" content="https://me2023.github.io/categories/CS%E7%9B%B8%E5%85%B3%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80/index.html">
+    <meta name="description" content="数学符号括号、矩阵相关 花括号 $\lbrace A \rbrace$  1\lbrace A \rbrace 大括号注意，在MathJax，“\”需替换为“\\”。 $$ m_{ij}&#x3D;\left\lbrace \begin{aligned} 1 &amp; , &amp; \text{if }(a_i, b_j)\in R, \\ 0 &amp; , &amp; \text{if }">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTeX代码备忘">
+<meta property="og:url" content="https://me2023.github.io/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/index.html">
 <meta property="og:site_name" content="一隅世界">
-<meta property="og:description" content="诗酒趁年华">
+<meta property="og:description" content="数学符号括号、矩阵相关 花括号 $\lbrace A \rbrace$  1\lbrace A \rbrace 大括号注意，在MathJax，“\”需替换为“\\”。 $$ m_{ij}&#x3D;\left\lbrace \begin{aligned} 1 &amp; , &amp; \text{if }(a_i, b_j)\in R, \\ 0 &amp; , &amp; \text{if }">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-09T01:04:05.000Z">
+<meta property="article:modified_time" content="2022-11-11T02:08:58.333Z">
 <meta property="article:author" content="来生书">
-<meta property="article:tag" content="生活,人工智能,物理">
+<meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://me2023.github.io/categories/CS%E7%9B%B8%E5%85%B3%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80/">
+<link rel="canonical" href="https://me2023.github.io/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/CS相关数理基础/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://me2023.github.io/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/","path":"2022/11/09/LaTeX代码备忘/","title":"LaTeX代码备忘"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: CS相关数理基础 | 一隅世界</title>
+<title>LaTeX代码备忘 | 一隅世界</title>
   
 
 
@@ -130,7 +132,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -143,6 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">数学符号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%AC%E5%8F%B7%E3%80%81%E7%9F%A9%E9%98%B5%E7%9B%B8%E5%85%B3"><span class="nav-number">1.1.</span> <span class="nav-text">括号、矩阵相关</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -189,50 +192,130 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">CS相关数理基础
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://me2023.github.io/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+      <meta itemprop="name" content="来生书">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一隅世界">
+      <meta itemprop="description" content="诗酒趁年华">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LaTeX代码备忘 | 一隅世界">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LaTeX代码备忘
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-11-09 09:04:05" itemprop="dateCreated datePublished" datetime="2022-11-09T09:04:05+08:00">2022-11-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-11 10:08:58" itemprop="dateModified" datetime="2022-11-11T10:08:58+08:00">2022-11-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">编程语言基础</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>185</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h1><h2 id="括号、矩阵相关"><a href="#括号、矩阵相关" class="headerlink" title="括号、矩阵相关"></a>括号、矩阵相关</h2><ol>
+<li><p>花括号 $\lbrace A \rbrace$</p>
+ <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\lbrace</span> A <span class="keyword">\rbrace</span></span><br></pre></td></tr></table></figure></li>
+<li><p>大括号<br>注意，在MathJax，“\”需替换为“\\”。<br> $$<br> m_{ij}&#x3D;\left\lbrace<br> \begin{aligned}<br> 1 &amp; , &amp; \text{if }(a_i, b_j)\in R, \\<br> 0 &amp; , &amp; \text{if }(a_i, b_j)\notin R.<br> \end{aligned}<br> \right.<br> $$</p>
+ <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">m<span class="built_in">_</span>&#123;ij&#125;=<span class="keyword">\left</span><span class="keyword">\lbrace</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;aligned&#125;</span><br><span class="line">    1 <span class="built_in">&amp;</span> , <span class="built_in">&amp;</span> <span class="keyword">\text</span>&#123;if &#125;(a<span class="built_in">_</span>i, b<span class="built_in">_</span>j)<span class="keyword">\in</span> R, <span class="keyword">\\</span></span><br><span class="line">    0 <span class="built_in">&amp;</span> , <span class="built_in">&amp;</span> <span class="keyword">\text</span>&#123;if &#125;(a<span class="built_in">_</span>i, b<span class="built_in">_</span>j)<span class="keyword">\notin</span> R.</span><br><span class="line"><span class="keyword">\end</span>&#123;aligned&#125;</span><br><span class="line"><span class="keyword">\right</span>.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>矩阵<br> $$<br> \begin{matrix} 0 &amp; 1 \\ 1 &amp; 0 \end{matrix}<br> \quad<br> \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}<br> \quad<br> \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}<br> \quad<br> \begin{Bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{Bmatrix}<br> \quad<br> \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix}<br> \quad<br> \begin{Vmatrix} i &amp; 0 \\ 0 &amp; -i \end{Vmatrix}<br> $$</p>
+ <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;matrix&#125; 0 <span class="built_in">&amp;</span> 1 <span class="keyword">\\</span> 1 <span class="built_in">&amp;</span> 0 <span class="keyword">\end</span>&#123;matrix&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;pmatrix&#125; 0 <span class="built_in">&amp;</span> -i <span class="keyword">\\</span> i <span class="built_in">&amp;</span> 0 <span class="keyword">\end</span>&#123;pmatrix&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;bmatrix&#125; 0 <span class="built_in">&amp;</span> -1 <span class="keyword">\\</span> 1 <span class="built_in">&amp;</span> 0 <span class="keyword">\end</span>&#123;bmatrix&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;Bmatrix&#125; 1 <span class="built_in">&amp;</span> 0 <span class="keyword">\\</span> 0 <span class="built_in">&amp;</span> -1 <span class="keyword">\end</span>&#123;Bmatrix&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;vmatrix&#125; a <span class="built_in">&amp;</span> b <span class="keyword">\\</span> c <span class="built_in">&amp;</span> d <span class="keyword">\end</span>&#123;vmatrix&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;Vmatrix&#125; i <span class="built_in">&amp;</span> 0 <span class="keyword">\\</span> 0 <span class="built_in">&amp;</span> -i <span class="keyword">\end</span>&#123;Vmatrix&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-11-10T15:05:08+08:00"
-              content="2022-11-10">
-          11-10
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/" itemprop="url">
-            <span itemprop="name">关系和有向图 Relations and Digraphs</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/LaTeX/" rel="tag"><i class="fa fa-tag"></i> LaTeX</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/11/10/%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/" rel="next" title="修改日志">
+                  修改日志 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 </div>
   </main>
@@ -306,7 +389,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
