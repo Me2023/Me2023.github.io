@@ -14,6 +14,63 @@
 <h2 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h2><ol>
 <li>无穷 $\infty$</li>
 </ol>
+<h2 id="双目运算符"><a href="#双目运算符" class="headerlink" title="双目运算符"></a>双目运算符</h2><ol>
+<li>关系运算符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$≤$</td>
+<td>\leq</td>
+<td>$≠$</td>
+<td>\neq</td>
+<td>$≈$</td>
+<td>\approx</td>
+<td>$∣∣$</td>
+<td>\mid</td>
+</tr>
+<tr>
+<td>$≥$</td>
+<td>\geq</td>
+<td>$≐$</td>
+<td>\doteq</td>
+<td>$≅$</td>
+<td>\cong</td>
+<td>$∥$</td>
+<td>\parallel</td>
+</tr>
+<tr>
+<td>$≪$</td>
+<td>\ll</td>
+<td>$∼$</td>
+<td>\sim</td>
+<td>$≡$</td>
+<td>\equiv</td>
+<td>$∝$</td>
+<td>\propto</td>
+</tr>
+<tr>
+<td>$≫$</td>
+<td>\gg</td>
+<td>$≃$</td>
+<td>\simeq</td>
+<td>$⊥$</td>
+<td>\perp</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>编程语言基础</category>
@@ -42,44 +99,37 @@
   <entry>
     <title>关系和有向图 Relations and Digraphs</title>
     <url>/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/</url>
-    <content><![CDATA[<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
-<li><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em><ul>
+    <content><![CDATA[<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="笛卡尔积-product-set-x2F-Cartesian-product"><a href="#笛卡尔积-product-set-x2F-Cartesian-product" class="headerlink" title="笛卡尔积 (product set&#x2F;Cartesian product)"></a><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em></h2><ul>
 <li>$A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$</li>
 </ul>
-</li>
-<li><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></li>
-</ul>
-<span id="more"></span>
+<h2 id="划分-partiton-x2F-quotient-set"><a href="#划分-partiton-x2F-quotient-set" class="headerlink" title="划分 (partiton&#x2F;quotient set)"></a><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></h2><span id="more"></span>
 
-<ul>
-<li><strong>关系</strong> <em>(relation)</em><ul>
+<h2 id="关系-relation"><a href="#关系-relation" class="headerlink" title="关系 (relation)"></a><strong>关系</strong> <em>(relation)</em></h2><ul>
 <li>A <strong>relation</strong> $R$ from $A$ to $B$ is a subset of $A\times B$. </li>
 <li>If $R\subseteq A\times B$ and $(a,b)\in R$, we say that $a$ <strong>is related to</strong> $b$ <strong>by</strong> $R$, and we also write $a\ R\ b$.</li>
 <li>$R\subseteq A\times A$ <strong>is a relation on</strong> $A$.</li>
 <li><strong>$R$-relative set of</strong> $x$: $R(x) &#x3D; \lbrace y\in B | x\ R\  y\rbrace$.</li>
 <li><strong>$R$-relative set of</strong> $A_1\subseteq A$: $R(A_1) &#x3D; \lbrace y\in B | x\ R\  y$ for some $x$ in $A_1$$\rbrace$.<ul>
-<li>Theorem 1:<ul>
+<li><em>Theorem 1</em>:<ul>
 <li>If $A_1\subseteq A_2$, then $R(A_1)\subseteq R(A_2)$.</li>
 <li>$R(A_1\cup A_2)&#x3D; R(A_1)\cup R(A_2)$</li>
 <li>$R(A_1\cap A_2)\subseteq R(A_1)\cap R(A_2)$</li>
 </ul>
 </li>
-<li>Theorem 2: Let $R$ and $S$ be relations from A to B. If $R(a)&#x3D;S(a)$ for all $a$ in $A$, then $R&#x3D; S$.</li>
+<li><em>Theorem 2</em>: Let $R$ and $S$ be relations from A to B. If $R(a)&#x3D;S(a)$ for all $a$ in $A$, then $R&#x3D; S$.</li>
 </ul>
 </li>
-<li><strong>关系矩阵</strong> matrix of a relation: $A&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ and $B&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ are finite sets, and $R$ is a relation from $A$ to $B$, we represent $R$ by the $m\times n$ matrix $M_R&#x3D;[m_{ij}]$, which is defined by<br>$$<br>m_{ij}&#x3D;\left\lbrace<br>\begin{aligned}<br>  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\<br>  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.<br>\end{aligned}<br>\right.<br>$$<br>The matrix $M_R$ is called the <strong>matrix of</strong> $R$.</li>
+<li><strong>关系矩阵</strong> matrix of a relation: $A&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ and $B&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ are finite sets, and $R$ is a relation from $A$ to $B$, we represent $R$ by the $m\times n$ matrix $M_R&#x3D;[m_{ij}]$, which is defined by<br>  $$<br>  m_{ij}&#x3D;\left\lbrace<br>  \begin{aligned}<br>  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\<br>  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.<br>  \end{aligned}<br>  \right.<br>  $$<br>  The matrix $M_R$ is called the <strong>matrix of</strong> $R$.</li>
 </ul>
-</li>
-<li><strong>有向图</strong> <em>(digraphs&#x2F;directed graph)</em><ul>
+<h2 id="有向图-digraphs-x2F-directed-graph"><a href="#有向图-digraphs-x2F-directed-graph" class="headerlink" title="有向图 (digraphs&#x2F;directed graph)"></a><strong>有向图</strong> <em>(digraphs&#x2F;directed graph)</em></h2><ul>
 <li>vertices, edge, in-degree, out-degree</li>
 </ul>
-</li>
-<li><strong>路径</strong> <em>(path)</em><ul>
+<h2 id="路径-path"><a href="#路径-path" class="headerlink" title="路径 (path)"></a><strong>路径</strong> <em>(path)</em></h2><ul>
 <li>A path of length n in $R$ from $a$ to $b$ is a finite sequence $\pi:a,x_1x_2,…x_{n-1},b$, beginning with $a$ and ending with $b$, such that $a\ R\ x_1,\ x_1\ R\ x_2,\ …,\ x_{n-1}\ R\ b$.</li>
 <li>If $n$ is a fixed positive integer, $x\ R^n\ y$ means that there is a path of length $n$ from $x$ to $y$ in $R$.<ul>
 <li>$R^\infty$ is sometimes called the <strong>connectivity relation</strong> for $R$.</li>
-</ul>
-</li>
+<li><em>Theorem 1</em>: If $R$ is a relation on $A&#x3D;\lbrace a_1,a_2,…,a_n\rbrace$, then $M_{R^2}&#x3D;M_R\odot M_R$.</li>
+<li><em>Theorem 1</em></li>
 </ul>
 </li>
 </ul>

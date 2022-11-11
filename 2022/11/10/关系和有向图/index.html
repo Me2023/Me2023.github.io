@@ -23,15 +23,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"me2023.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="基础知识 笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$   划分 (partiton&#x2F;quotient set)">
+    <meta name="description" content="基础知识笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$  划分 (partiton&#x2F;quotient set)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关系和有向图 Relations and Digraphs">
 <meta property="og:url" content="https://me2023.github.io/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/index.html">
 <meta property="og:site_name" content="一隅世界">
-<meta property="og:description" content="基础知识 笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$   划分 (partiton&#x2F;quotient set)">
+<meta property="og:description" content="基础知识笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$  划分 (partiton&#x2F;quotient set)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-10T07:05:08.116Z">
-<meta property="article:modified_time" content="2022-11-11T03:41:13.553Z">
+<meta property="article:modified_time" content="2022-11-11T08:26:18.410Z">
 <meta property="article:author" content="来生书">
 <meta property="article:tag" content="离散数学">
 <meta property="article:tag" content="图论">
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%9A%8F%E4%BE%BF%E7%9A%84%E6%B5%8B%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">一些随便的测试</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-product-set-x2F-Cartesian-product"><span class="nav-number">1.1.</span> <span class="nav-text">笛卡尔积 (product set&#x2F;Cartesian product)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%92%E5%88%86-partiton-x2F-quotient-set"><span class="nav-number">1.2.</span> <span class="nav-text">划分 (partiton&#x2F;quotient set)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB-relation"><span class="nav-number">1.3.</span> <span class="nav-text">关系 (relation)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%90%91%E5%9B%BE-digraphs-x2F-directed-graph"><span class="nav-number">1.4.</span> <span class="nav-text">有向图 (digraphs&#x2F;directed graph)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84-path"><span class="nav-number">1.5.</span> <span class="nav-text">路径 (path)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%9A%8F%E4%BE%BF%E7%9A%84%E6%B5%8B%E8%AF%95"><span class="nav-number">2.</span> <span class="nav-text">一些随便的测试</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -258,7 +258,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-11 11:41:13" itemprop="dateModified" datetime="2022-11-11T11:41:13+08:00">2022-11-11</time>
+      <time title="修改时间：2022-11-11 16:26:18" itemprop="dateModified" datetime="2022-11-11T16:26:18+08:00">2022-11-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -277,7 +277,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>384</span>
+      <span>407</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -295,44 +295,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><ul>
-<li><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em><ul>
+        <h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="笛卡尔积-product-set-x2F-Cartesian-product"><a href="#笛卡尔积-product-set-x2F-Cartesian-product" class="headerlink" title="笛卡尔积 (product set&#x2F;Cartesian product)"></a><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em></h2><ul>
 <li>$A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$</li>
 </ul>
-</li>
-<li><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></li>
-</ul>
-<span id="more"></span>
+<h2 id="划分-partiton-x2F-quotient-set"><a href="#划分-partiton-x2F-quotient-set" class="headerlink" title="划分 (partiton&#x2F;quotient set)"></a><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></h2><span id="more"></span>
 
-<ul>
-<li><strong>关系</strong> <em>(relation)</em><ul>
+<h2 id="关系-relation"><a href="#关系-relation" class="headerlink" title="关系 (relation)"></a><strong>关系</strong> <em>(relation)</em></h2><ul>
 <li>A <strong>relation</strong> $R$ from $A$ to $B$ is a subset of $A\times B$. </li>
 <li>If $R\subseteq A\times B$ and $(a,b)\in R$, we say that $a$ <strong>is related to</strong> $b$ <strong>by</strong> $R$, and we also write $a\ R\ b$.</li>
 <li>$R\subseteq A\times A$ <strong>is a relation on</strong> $A$.</li>
 <li><strong>$R$-relative set of</strong> $x$: $R(x) &#x3D; \lbrace y\in B | x\ R\  y\rbrace$.</li>
 <li><strong>$R$-relative set of</strong> $A_1\subseteq A$: $R(A_1) &#x3D; \lbrace y\in B | x\ R\  y$ for some $x$ in $A_1$$\rbrace$.<ul>
-<li>Theorem 1:<ul>
+<li><em>Theorem 1</em>:<ul>
 <li>If $A_1\subseteq A_2$, then $R(A_1)\subseteq R(A_2)$.</li>
 <li>$R(A_1\cup A_2)&#x3D; R(A_1)\cup R(A_2)$</li>
 <li>$R(A_1\cap A_2)\subseteq R(A_1)\cap R(A_2)$</li>
 </ul>
 </li>
-<li>Theorem 2: Let $R$ and $S$ be relations from A to B. If $R(a)&#x3D;S(a)$ for all $a$ in $A$, then $R&#x3D; S$.</li>
+<li><em>Theorem 2</em>: Let $R$ and $S$ be relations from A to B. If $R(a)&#x3D;S(a)$ for all $a$ in $A$, then $R&#x3D; S$.</li>
 </ul>
 </li>
-<li><strong>关系矩阵</strong> matrix of a relation: $A&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ and $B&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ are finite sets, and $R$ is a relation from $A$ to $B$, we represent $R$ by the $m\times n$ matrix $M_R&#x3D;[m_{ij}]$, which is defined by<br>$$<br>m_{ij}&#x3D;\left\lbrace<br>\begin{aligned}<br>  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\<br>  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.<br>\end{aligned}<br>\right.<br>$$<br>The matrix $M_R$ is called the <strong>matrix of</strong> $R$.</li>
+<li><strong>关系矩阵</strong> matrix of a relation: $A&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ and $B&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ are finite sets, and $R$ is a relation from $A$ to $B$, we represent $R$ by the $m\times n$ matrix $M_R&#x3D;[m_{ij}]$, which is defined by<br>  $$<br>  m_{ij}&#x3D;\left\lbrace<br>  \begin{aligned}<br>  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\<br>  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.<br>  \end{aligned}<br>  \right.<br>  $$<br>  The matrix $M_R$ is called the <strong>matrix of</strong> $R$.</li>
 </ul>
-</li>
-<li><strong>有向图</strong> <em>(digraphs&#x2F;directed graph)</em><ul>
+<h2 id="有向图-digraphs-x2F-directed-graph"><a href="#有向图-digraphs-x2F-directed-graph" class="headerlink" title="有向图 (digraphs&#x2F;directed graph)"></a><strong>有向图</strong> <em>(digraphs&#x2F;directed graph)</em></h2><ul>
 <li>vertices, edge, in-degree, out-degree</li>
 </ul>
-</li>
-<li><strong>路径</strong> <em>(path)</em><ul>
+<h2 id="路径-path"><a href="#路径-path" class="headerlink" title="路径 (path)"></a><strong>路径</strong> <em>(path)</em></h2><ul>
 <li>A path of length n in $R$ from $a$ to $b$ is a finite sequence $\pi:a,x_1x_2,…x_{n-1},b$, beginning with $a$ and ending with $b$, such that $a\ R\ x_1,\ x_1\ R\ x_2,\ …,\ x_{n-1}\ R\ b$.</li>
 <li>If $n$ is a fixed positive integer, $x\ R^n\ y$ means that there is a path of length $n$ from $x$ to $y$ in $R$.<ul>
 <li>$R^\infty$ is sometimes called the <strong>connectivity relation</strong> for $R$.</li>
-</ul>
-</li>
+<li><em>Theorem 1</em>: If $R$ is a relation on $A&#x3D;\lbrace a_1,a_2,…,a_n\rbrace$, then $M_{R^2}&#x3D;M_R\odot M_R$.</li>
+<li><em>Theorem 1</em></li>
 </ul>
 </li>
 </ul>
@@ -348,13 +341,6 @@
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-        <div class="popular-posts-date">2022-11-09</div>
-      <div class="popular-posts-title"><a href="/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/" rel="bookmark">LaTeX代码备忘</a></div>
-    </li>
-  </ul>
 
 
     <footer class="post-footer">
