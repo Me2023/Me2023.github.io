@@ -1,6 +1,6 @@
 :root {
   --body-bg-color: rgba(250,210,225,0.2);
-  --content-bg-color: rgba(255,255,255,0.6);
+  --content-bg-color: rgba(255,255,255,0.75);
   --card-bg-color: #f5f5f5;
   --text-color: #555;
   --blockquote-color: #666;
@@ -18,11 +18,48 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #fff;
-  --highlight-foreground: #6c696e;
-  --highlight-gutter-background: #f0f0f0;
-  --highlight-gutter-foreground: #7a787c;
+  --highlight-background: #f8f8f8;
+  --highlight-foreground: #383838;
+  --highlight-gutter-background: #e4e4e4;
+  --highlight-gutter-foreground: #4b4b4b;
   color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #282828;
+    --content-bg-color: rgba(60,60,60,0.75);
+    --card-bg-color: #555;
+    --text-color: #ccc;
+    --blockquote-color: #bbb;
+    --link-color: #ccc;
+    --link-hover-color: #eee;
+    --brand-color: #ddd;
+    --brand-hover-color: #ddd;
+    --table-row-odd-bg-color: #282828;
+    --table-row-hover-bg-color: #363636;
+    --menu-item-bg-color: #555;
+    --theme-color: #222;
+    --btn-default-bg: #222;
+    --btn-default-color: #ccc;
+    --btn-default-border-color: #555;
+    --btn-default-hover-bg: #666;
+    --btn-default-hover-color: #ccc;
+    --btn-default-hover-border-color: #666;
+    --highlight-background: #262729;
+    --highlight-foreground: #b7bec9;
+    --highlight-gutter-background: #343638;
+    --highlight-gutter-foreground: #a8aeb9;
+    color-scheme: dark;
+  }
+  img {
+    opacity: 0.75;
+  }
+  img:hover {
+    opacity: 0.9;
+  }
+  iframe {
+    color-scheme: light;
+  }
 }
 html {
   line-height: 1.15; /* 1 */
@@ -185,7 +222,7 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: Lora, Noto Serif SC, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -211,22 +248,22 @@ h6 {
   margin: 30px 0 15px;
 }
 h1 {
-  font-size: 1.5em;
+  font-size: 1.275em;
 }
 h2 {
-  font-size: 1.375em;
+  font-size: 1.15em;
 }
 h3 {
-  font-size: 1.25em;
+  font-size: 1.025em;
 }
 h4 {
-  font-size: 1.125em;
+  font-size: 0.9em;
 }
 h5 {
-  font-size: 1em;
+  font-size: 0.775em;
 }
 h6 {
-  font-size: 0.875em;
+  font-size: 0.65em;
 }
 p {
   margin: 0 0 20px;
@@ -371,12 +408,21 @@ td {
   transform: rotate(-45deg);
 }
 /*!
-  Theme: Unikitty Light
-  Author: Josh W Lewis (@joshwlewis)
+  Theme: Sagelight
+  Author: Carter Veldhuizen
   License: ~ MIT (or more permissive) [via base16-schemes-source]
   Maintainer: @highlightjs/core-team
   Version: 2021.09.0
-*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#6c696e;background:#fff}.hljs ::selection,.hljs::selection{background-color:#c4c3c5;color:#6c696e}.hljs-comment{color:#a7a5a8}.hljs-tag{color:#89878b}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#6c696e}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#d8137f}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#d65407}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#dc8a0e}.hljs-strong{font-weight:700;color:#dc8a0e}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#17ad98}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#149bda}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#775dff}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#aa17e6}.hljs-emphasis{color:#aa17e6;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#e013d0}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#383838;background:#f8f8f8}.hljs ::selection,.hljs::selection{background-color:#d8d8d8;color:#383838}.hljs-comment{color:#b8b8b8}.hljs-tag{color:#585858}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#383838}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#fa8480}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#ffaa61}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#ffdc61}.hljs-strong{font-weight:700;color:#ffdc61}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#a0d2c8}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#a2d6f5}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#a0a7d2}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#c8a0d2}.hljs-emphasis{color:#c8a0d2;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#d2b2a0}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
+@media (prefers-color-scheme: dark) {
+/*!
+  Theme: Edge Dark
+  Author: cjayross (https://github.com/cjayross)
+  License: ~ MIT (or more permissive) [via base16-schemes-source]
+  Maintainer: @highlightjs/core-team
+  Version: 2021.09.0
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#b7bec9;background:#262729}.hljs ::selection,.hljs::selection{background-color:#b7bec9;color:#b7bec9}.hljs-comment{color:#3e4249}.hljs-tag{color:#73b3e7}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#b7bec9}.hljs-operator{opacity:.7}.hljs-attr,.hljs-bullet,.hljs-deletion,.hljs-link,.hljs-literal,.hljs-name,.hljs-number,.hljs-selector-tag,.hljs-symbol,.hljs-template-variable,.hljs-variable,.hljs-variable.constant_{color:#e77171}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#dbb774}.hljs-strong{font-weight:700;color:#dbb774}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#a1bf78}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#5ebaa5}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#73b3e7}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#d390e7}.hljs-emphasis{color:#d390e7;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#5ebaa5}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
+}
 .highlight:hover .copy-btn,
 pre:hover .copy-btn {
   opacity: 1;
@@ -451,7 +497,7 @@ pre figcaption a:hover {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
+  font-family: Space Mono, Noto Sans SC, consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
 }
 code {
   border-radius: 3px;
@@ -2503,6 +2549,52 @@ ul.breadcrumb li:last-child {
   border-bottom-color: #111;
   color: #111;
 }
+@media (prefers-color-scheme: dark) {
+  .tag-cloud-0 {
+    border-bottom-color: #555;
+    color: #555;
+  }
+  .tag-cloud-1 {
+    border-bottom-color: #646464;
+    color: #646464;
+  }
+  .tag-cloud-2 {
+    border-bottom-color: #737373;
+    color: #737373;
+  }
+  .tag-cloud-3 {
+    border-bottom-color: #828282;
+    color: #828282;
+  }
+  .tag-cloud-4 {
+    border-bottom-color: #929292;
+    color: #929292;
+  }
+  .tag-cloud-5 {
+    border-bottom-color: #a1a1a1;
+    color: #a1a1a1;
+  }
+  .tag-cloud-6 {
+    border-bottom-color: #b0b0b0;
+    color: #b0b0b0;
+  }
+  .tag-cloud-7 {
+    border-bottom-color: #c0c0c0;
+    color: #c0c0c0;
+  }
+  .tag-cloud-8 {
+    border-bottom-color: #cfcfcf;
+    color: #cfcfcf;
+  }
+  .tag-cloud-9 {
+    border-bottom-color: #dedede;
+    color: #dedede;
+  }
+  .tag-cloud-10 {
+    border-bottom-color: #eee;
+    color: #eee;
+  }
+}
 .search-active {
   overflow: hidden;
 }
@@ -2559,6 +2651,11 @@ ul.breadcrumb li:last-child {
   border-top-right-radius: 5px;
   display: flex;
   padding: 5px;
+}
+@media (prefers-color-scheme: dark) {
+  .search-popup .search-header {
+    background: #666;
+  }
 }
 .search-popup input.search-input {
   background: transparent;
@@ -2645,7 +2742,7 @@ mjx-container[display='true'] + br {
 }
 .header {
   background: var(--content-bg-color);
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 25px 25px 25px 25px;
   box-shadow: initial;
 }
 @media (max-width: 991px) {
@@ -2677,7 +2774,7 @@ mjx-container[display='true'] + br {
   }
 }
 .main-inner {
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 25px 25px 25px 25px;
   box-sizing: border-box;
   width: calc(100% - 252px);
 }
@@ -2811,7 +2908,7 @@ mjx-container[display='true'] + br {
 }
 .sidebar-inner {
   background: var(--content-bg-color);
-  border-radius: 30px;
+  border-radius: 25px;
   box-shadow: initial;
   box-sizing: border-box;
   color: var(--text-color);
@@ -2894,4 +2991,11 @@ mjx-container[display='true'] + br {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+body {
+  background: url("/images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0% 100%;
 }
