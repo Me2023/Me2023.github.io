@@ -104,7 +104,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>关系和有向图（一） Relations and Digraphs</title>
+    <title>关系和有向图 Relations and Digraphs</title>
     <url>/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/</url>
     <content><![CDATA[<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="笛卡尔积-product-set-x2F-Cartesian-product"><a href="#笛卡尔积-product-set-x2F-Cartesian-product" class="headerlink" title="笛卡尔积 (product set&#x2F;Cartesian product)"></a><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em></h2><ul>
 <li>$A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$</li>
@@ -192,15 +192,19 @@
       </tags>
   </entry>
   <entry>
-    <title>MATLAB图和网络算法</title>
-    <url>/2022/11/11/MATLAB%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[]]></content>
+    <title>MATLAB 图和网络算法（一）</title>
+    <url>/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>主要参考MATLAB官方帮助文档：<br><a href="https://ww2.mathworks.cn/help/matlab/graph-and-network-algorithms_zh_CN.html">https://ww2.mathworks.cn/help/matlab/graph-and-network-algorithms_zh_CN.html</a></p>
+<img src="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/image1.png" class="" title="image1.png This is an example image">
+
+<p>啊</p>
+]]></content>
       <categories>
         <category>编程语言/工具</category>
       </categories>
       <tags>
-        <tag>MATLAB</tag>
         <tag>图论算法</tag>
+        <tag>MATLAB</tag>
       </tags>
   </entry>
 </search>
