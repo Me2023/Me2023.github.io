@@ -1,91 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>LaTeX 代码备忘</title>
-    <url>/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<h1 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h1><h2 id="括号、矩阵相关"><a href="#括号、矩阵相关" class="headerlink" title="括号、矩阵相关"></a>括号、矩阵相关</h2><ol>
-<li><p>花括号 $\lbrace A \rbrace$</p>
-</li>
-<li><p>大括号<br>注意，在MathJax，“\”需要替换为“\\”。<br> $$<br> m_{ij}&#x3D;\left\lbrace<br> \begin{aligned}<br> 1 &amp; , &amp; \text{if }(a_i, b_j)\in R, \\<br> 0 &amp; , &amp; \text{if }(a_i, b_j)\notin R.<br> \end{aligned}<br> \right.<br> $$</p>
-</li>
-<li><p>矩阵<br> $$<br> \begin{matrix} 0 &amp; 1 \\ 1 &amp; 0 \end{matrix}<br> \quad<br> \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}<br> \quad<br> \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}<br> \quad<br> \begin{Bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{Bmatrix}<br> \quad<br> \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix}<br> \quad<br> \begin{Vmatrix} i &amp; 0 \\ 0 &amp; -i \end{Vmatrix}<br> $$</p>
-</li>
-</ol>
-<h2 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h2><ol>
-<li>无穷 $\infty$</li>
-</ol>
-<h2 id="双目运算符"><a href="#双目运算符" class="headerlink" title="双目运算符"></a>双目运算符</h2><ol>
-<li>关系运算符</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$≤$</td>
-<td>\leq</td>
-<td>$≠$</td>
-<td>\neq</td>
-<td>$≈$</td>
-<td>\approx</td>
-<td>$∣$</td>
-<td>\mid</td>
-</tr>
-<tr>
-<td>$≥$</td>
-<td>\geq</td>
-<td>$≐$</td>
-<td>\doteq</td>
-<td>$≅$</td>
-<td>\cong</td>
-<td>$∥$</td>
-<td>\parallel</td>
-</tr>
-<tr>
-<td>$≪$</td>
-<td>\ll</td>
-<td>$∼$</td>
-<td>\sim</td>
-<td>$≡$</td>
-<td>\equiv</td>
-<td>$∝$</td>
-<td>\propto</td>
-</tr>
-<tr>
-<td>$≫$</td>
-<td>\gg</td>
-<td>$≃$</td>
-<td>\simeq</td>
-<td>$⊥$</td>
-<td>\perp</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<ol start="2">
-<li>$a\ \cancel{R} \ a$</li>
-</ol>
-<h2 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h2><ol>
-<li>花体字母：$\mathbb{R} \quad \mathcal{R} \quad \mathscr{R}$</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程语言/工具</category>
-      </categories>
-      <tags>
-        <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关系和有向图 Relations and Digraphs</title>
     <url>/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/</url>
     <content><![CDATA[<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="笛卡尔积-product-set-x2F-Cartesian-product"><a href="#笛卡尔积-product-set-x2F-Cartesian-product" class="headerlink" title="笛卡尔积 (product set&#x2F;Cartesian product)"></a><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em></h2><ul>
@@ -174,6 +89,44 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构：图的最短路径算法</title>
+    <url>/2022/11/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E5%9B%BE%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="用到的图的类定义（邻接矩阵存储）"><a href="#用到的图的类定义（邻接矩阵存储）" class="headerlink" title="用到的图的类定义（邻接矩阵存储）"></a>用到的图的类定义（邻接矩阵存储）</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> numVertices, numEdges;</span><br><span class="line">    <span class="type">char</span> VerticesList[maxVertices];</span><br><span class="line">    <span class="type">int</span> Edge[maxVertices][maxVertices];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getVertexPos</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;         <span class="comment">// 从顶点数据值找出顶点号</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">firstNeighbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;        <span class="comment">// 给出顶点 v 的第一个邻接顶点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">nexNeightbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;  <span class="comment">// 给出顶点 v 某邻接顶点 w 的下一个邻接顶点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfVertices</span><span class="params">(MGraph&amp; G)</span></span>; </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfEdges</span><span class="params">(MGraph&amp; G)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">char</span> <span class="title">getValue</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getWeight</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="无权最短路径"><a href="#无权最短路径" class="headerlink" title="无权最短路径"></a>无权最短路径</h1>
+
+<p>图的广度优先搜索</p>
+<ul>
+<li>相关：树的层序遍历</li>
+</ul>
+<h1 id="非负权值的单源最短路径：Dijkstra-算法"><a href="#非负权值的单源最短路径：Dijkstra-算法" class="headerlink" title="非负权值的单源最短路径：Dijkstra 算法"></a>非负权值的单源最短路径：Dijkstra 算法</h1><p>按路径长度的递增次序，逐步产生最短路径。本质上是贪心策略。在权值非负（所选最短路径长度<em>递增</em>）的情况下，Dijkstra算法所找的局部最优确实是全局最优。</p>
+<ul>
+<li>下一条最短路径总是通过“已产生的最短路径再扩充某一条边”得到。<ul>
+<li>如果觉得不对劲，再次注意，产生的最短路径的长度是<em>递增</em>的。</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>初始化：源点到源点的最短路径显然已找到，标记源点，以之为出发点，进行后续操作。</li>
+<li>每次从未标记的顶点中，选择到达源点路径长度最短的顶点，进行标记，即该顶点已找到最短路径。</li>
+<li>经由刚找到的最短路径，计算其后续邻接顶点（不包含已被标记的顶点）的路径长度，如果该长度比已知到该邻接顶点的长度更短，更新记录该长度和路径。</li>
+<li>重复 2~3 直到所有顶点都被标记。</li>
+</ol>
+<h2 id="代码实现：Dijkstra-算法"><a href="#代码实现：Dijkstra-算法" class="headerlink" title="代码实现：Dijkstra 算法"></a>代码实现：Dijkstra 算法</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ShortestPath</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> dist[], <span class="type">int</span> path[])</span> </span>&#123;</span><br><span class="line"><span class="comment">// 求顶点 v 到图 G 各顶点的最短路径，算法返回 dist[] 和 path[]</span></span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">numberOfVertices</span>(G);</span><br><span class="line">    inst S[maxVertices];            <span class="comment">// 最短路径标记顶点集</span></span><br><span class="line">    <span class="type">int</span> i, j, k;</span><br><span class="line">    weight w, min;</span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        dist[i] = G.Edge[v][i];     <span class="comment">// 路径长度初始化</span></span><br><span class="line">        S[i] = <span class="number">0</span>;                   <span class="comment">// 标记初始化</span></span><br><span class="line">        <span class="keyword">if</span> (i != v &amp;&amp; dist[i] &lt; maxWeight) &#123;</span><br><span class="line">            path[i] = v;            <span class="comment">// 路径数组初始化（v 的邻接顶点）</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> path[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s[v] = <span class="number">1</span>; dist[v] = <span class="number">0</span>;          <span class="comment">// 到顶点 v 已找到最短路径</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 逐个求 v 到其他顶点最短路径</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n<span class="number">-1</span>; i++) &#123;</span><br><span class="line">        min = maxWeight; </span><br><span class="line">        <span class="type">int</span> u = v;                  <span class="comment">// 初始化</span></span><br><span class="line">        <span class="comment">// 找不在S中具有最短路径的顶点 u</span></span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!S[j] &amp;&amp; dist[j] &lt; min) &#123;</span><br><span class="line">                u = j;</span><br><span class="line">                min = dist[j];</span><br><span class="line">            &#125;                       </span><br><span class="line">        &#125;                           </span><br><span class="line">        S[u] = <span class="number">1</span>;                   <span class="comment">// 将 u 加入集合 S</span></span><br><span class="line">        <span class="comment">// 修改经过 u 到其他顶点的路径长度</span></span><br><span class="line">        <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            w = G.Edge[u][k];</span><br><span class="line">            <span class="keyword">if</span> (!S[k] &amp;&amp; w &lt; maxWeight &amp;&amp; dist[u] + w &lt; dist[k]) &#123;</span><br><span class="line">                <span class="comment">// 邻接顶点 k 未加入 S，且经过 u 到 k 比已知路径更短</span></span><br><span class="line">                dist[k] = dist[u] + w;</span><br><span class="line">                path[k] = u;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码实现：从-path-数据读取最短路径"><a href="#代码实现：从-path-数据读取最短路径" class="headerlink" title="代码实现：从 path 数据读取最短路径"></a>代码实现：从 path 数据读取最短路径</h2><h1 id="任意权值的单源最短路径：Bellman-Ford-算法"><a href="#任意权值的单源最短路径：Bellman-Ford-算法" class="headerlink" title="任意权值的单源最短路径：Bellman-Ford 算法"></a>任意权值的单源最短路径：Bellman-Ford 算法</h1><h1 id="正权值的所有顶点之间最短路径：Floyd-算法"><a href="#正权值的所有顶点之间最短路径：Floyd-算法" class="headerlink" title="正权值的所有顶点之间最短路径：Floyd 算法"></a>正权值的所有顶点之间最短路径：Floyd 算法</h1>]]></content>
+      <categories>
+        <category>CS 专业基础课</category>
+      </categories>
+      <tags>
+        <tag>图论算法</tag>
+        <tag>数据结构</tag>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C/C++ 动态内存分配</title>
     <url>/2022/11/12/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/</url>
     <content><![CDATA[<h1 id="C-内存管理"><a href="#C-内存管理" class="headerlink" title="C 内存管理"></a>C 内存管理</h1><p>在程序的执行期间经常需要动态分配内存。</p>
@@ -207,6 +160,91 @@
       </categories>
       <tags>
         <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX 代码备忘</title>
+    <url>/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<h1 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h1><h2 id="括号、矩阵相关"><a href="#括号、矩阵相关" class="headerlink" title="括号、矩阵相关"></a>括号、矩阵相关</h2><ol>
+<li><p>花括号 $\lbrace A \rbrace$</p>
+</li>
+<li><p>大括号<br>注意，在MathJax，“\”需要替换为“\\”。<br> $$<br> m_{ij}&#x3D;\left\lbrace<br> \begin{aligned}<br> 1 &amp; , &amp; \text{if }(a_i, b_j)\in R, \\<br> 0 &amp; , &amp; \text{if }(a_i, b_j)\notin R.<br> \end{aligned}<br> \right.<br> $$</p>
+</li>
+<li><p>矩阵<br> $$<br> \begin{matrix} 0 &amp; 1 \\ 1 &amp; 0 \end{matrix}<br> \quad<br> \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}<br> \quad<br> \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}<br> \quad<br> \begin{Bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{Bmatrix}<br> \quad<br> \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix}<br> \quad<br> \begin{Vmatrix} i &amp; 0 \\ 0 &amp; -i \end{Vmatrix}<br> $$</p>
+</li>
+</ol>
+<h2 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h2><ol>
+<li>无穷 $\infty$</li>
+</ol>
+<h2 id="双目运算符"><a href="#双目运算符" class="headerlink" title="双目运算符"></a>双目运算符</h2><ol>
+<li>关系运算符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$≤$</td>
+<td>\leq</td>
+<td>$≠$</td>
+<td>\neq</td>
+<td>$≈$</td>
+<td>\approx</td>
+<td>$∣$</td>
+<td>\mid</td>
+</tr>
+<tr>
+<td>$≥$</td>
+<td>\geq</td>
+<td>$≐$</td>
+<td>\doteq</td>
+<td>$≅$</td>
+<td>\cong</td>
+<td>$∥$</td>
+<td>\parallel</td>
+</tr>
+<tr>
+<td>$≪$</td>
+<td>\ll</td>
+<td>$∼$</td>
+<td>\sim</td>
+<td>$≡$</td>
+<td>\equiv</td>
+<td>$∝$</td>
+<td>\propto</td>
+</tr>
+<tr>
+<td>$≫$</td>
+<td>\gg</td>
+<td>$≃$</td>
+<td>\simeq</td>
+<td>$⊥$</td>
+<td>\perp</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>$a\ \cancel{R} \ a$</li>
+</ol>
+<h2 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h2><ol>
+<li>花体字母：$\mathbb{R} \quad \mathcal{R} \quad \mathscr{R}$</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程语言/工具</category>
+      </categories>
+      <tags>
+        <tag>LaTeX</tag>
       </tags>
   </entry>
   <entry>
@@ -256,44 +294,6 @@
       <tags>
         <tag>图论算法</tag>
         <tag>MATLAB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构：图的最短路径算法</title>
-    <url>/2022/11/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E5%9B%BE%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="用到的图的类定义（邻接矩阵存储）"><a href="#用到的图的类定义（邻接矩阵存储）" class="headerlink" title="用到的图的类定义（邻接矩阵存储）"></a>用到的图的类定义（邻接矩阵存储）</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> numVertices, numEdges;</span><br><span class="line">    <span class="type">char</span> VerticesList[maxVertices];</span><br><span class="line">    <span class="type">int</span> Edge[maxVertices][maxVertices];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getVertexPos</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;         <span class="comment">// 从顶点数据值找出顶点号</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">firstNeighbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;        <span class="comment">// 给出顶点 v 的第一个邻接顶点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">nexNeightbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;  <span class="comment">// 给出顶点 v 某邻接顶点 w 的下一个邻接顶点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfVertices</span><span class="params">(MGraph&amp; G)</span></span>; </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfEdges</span><span class="params">(MGraph&amp; G)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">char</span> <span class="title">getValue</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getWeight</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="无权最短路径"><a href="#无权最短路径" class="headerlink" title="无权最短路径"></a>无权最短路径</h1>
-
-<p>图的广度优先搜索</p>
-<ul>
-<li>相关：树的层序遍历</li>
-</ul>
-<h1 id="非负权值的单源最短路径：Dijkstra-算法"><a href="#非负权值的单源最短路径：Dijkstra-算法" class="headerlink" title="非负权值的单源最短路径：Dijkstra 算法"></a>非负权值的单源最短路径：Dijkstra 算法</h1><p>按路径长度的递增次序，逐步产生最短路径。本质上是贪心策略。在权值非负（所选最短路径长度<em>递增</em>）的情况下，Dijkstra算法所找的局部最优确实是全局最优。</p>
-<ul>
-<li>下一条最短路径总是通过“已产生的最短路径再扩充某一条边”得到。<ul>
-<li>如果觉得不对劲，再次注意，产生的最短路径的长度是<em>递增</em>的。</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>初始化：源点到源点的最短路径显然已找到，标记源点，以之为出发点，进行后续操作。</li>
-<li>每次从未标记的顶点中，选择到达源点路径长度最短的顶点，进行标记，即该顶点已找到最短路径。</li>
-<li>经由刚找到的最短路径，计算其后续邻接顶点（不包含已被标记的顶点）的路径长度，如果该长度比已知到该邻接顶点的长度更短，更新记录该长度和路径。</li>
-<li>重复 2~3 直到所有顶点都被标记。</li>
-</ol>
-<h2 id="代码实现：Dijkstra-算法"><a href="#代码实现：Dijkstra-算法" class="headerlink" title="代码实现：Dijkstra 算法"></a>代码实现：Dijkstra 算法</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ShortestPath</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> dist[], <span class="type">int</span> path[])</span> </span>&#123;</span><br><span class="line"><span class="comment">// 求顶点 v 到图 G 各顶点的最短路径，算法返回 dist[] 和 path[]</span></span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">numberOfVertices</span>(G);</span><br><span class="line">    inst S[maxVertices];            <span class="comment">// 最短路径标记顶点集</span></span><br><span class="line">    <span class="type">int</span> i, j, k;</span><br><span class="line">    weight w, min;</span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        dist[i] = G.Edge[v][i];     <span class="comment">// 路径长度初始化</span></span><br><span class="line">        S[i] = <span class="number">0</span>;                   <span class="comment">// 标记初始化</span></span><br><span class="line">        <span class="keyword">if</span> (i != v &amp;&amp; dist[i] &lt; maxWeight) &#123;</span><br><span class="line">            path[i] = v;            <span class="comment">// 路径数组初始化（v 的邻接顶点）</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> path[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s[v] = <span class="number">1</span>; dist[v] = <span class="number">0</span>;          <span class="comment">// 到顶点 v 已找到最短路径</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 逐个求 v 到其他顶点最短路径</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n<span class="number">-1</span>; i++) &#123;</span><br><span class="line">        min = maxWeight; </span><br><span class="line">        <span class="type">int</span> u = v;                  <span class="comment">// 初始化</span></span><br><span class="line">        <span class="comment">// 找不在S中具有最短路径的顶点 u</span></span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!S[j] &amp;&amp; dist[j] &lt; min) &#123;</span><br><span class="line">                u = j;</span><br><span class="line">                min = dist[j];</span><br><span class="line">            &#125;                       </span><br><span class="line">        &#125;                           </span><br><span class="line">        S[u] = <span class="number">1</span>;                   <span class="comment">// 将 u 加入集合 S</span></span><br><span class="line">        <span class="comment">// 修改经过 u 到其他顶点的路径长度</span></span><br><span class="line">        <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            w = G.Edge[u][k];</span><br><span class="line">            <span class="keyword">if</span> (!S[k] &amp;&amp; w &lt; maxWeight &amp;&amp; dist[u] + w &lt; dist[k]) &#123;</span><br><span class="line">                <span class="comment">// 邻接顶点 k 未加入 S，且经过 u 到 k 比已知路径更短</span></span><br><span class="line">                dist[k] = dist[u] + w;</span><br><span class="line">                path[k] = u;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="代码实现：从-path-数据读取最短路径"><a href="#代码实现：从-path-数据读取最短路径" class="headerlink" title="代码实现：从 path 数据读取最短路径"></a>代码实现：从 path 数据读取最短路径</h2><h1 id="任意权值的单源最短路径：Bellman-Ford-算法"><a href="#任意权值的单源最短路径：Bellman-Ford-算法" class="headerlink" title="任意权值的单源最短路径：Bellman-Ford 算法"></a>任意权值的单源最短路径：Bellman-Ford 算法</h1><h1 id="正权值的所有顶点之间最短路径：Floyd-算法"><a href="#正权值的所有顶点之间最短路径：Floyd-算法" class="headerlink" title="正权值的所有顶点之间最短路径：Floyd 算法"></a>正权值的所有顶点之间最短路径：Floyd 算法</h1>]]></content>
-      <categories>
-        <category>CS 专业基础课</category>
-      </categories>
-      <tags>
-        <tag>图论算法</tag>
-        <tag>C/C++</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
 </search>
