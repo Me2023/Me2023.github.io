@@ -337,6 +337,14 @@ m_{ij}=\left\lbrace
     <title>数据结构：活动网络</title>
     <url>/2022/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E6%B4%BB%E5%8A%A8%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>CS 专业基础课</category>
+      </categories>
+      <tags>
+        <tag>图论算法</tag>
+        <tag>C/C++</tag>
+        <tag>数据结构</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据结构：图的遍历和最小生成树算法</title>
