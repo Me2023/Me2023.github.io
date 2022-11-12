@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E9%A1%B5%E9%9D%A2%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="nav-number">1.1.</span> <span class="nav-text">更改页面透明度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2"><span class="nav-number">1.2.</span> <span class="nav-text">背景颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%86%E8%A7%92"><span class="nav-number">1.3.</span> <span class="nav-text">圆角</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%8A%A0"><span class="nav-number">2.</span> <span class="nav-text">功能增加</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E8%BF%91%E6%96%87%E7%AB%A0"><span class="nav-number">2.1.</span> <span class="nav-text">最近文章</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E9%A1%B5%E9%9D%A2%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="nav-number">1.1.</span> <span class="nav-text">更改页面透明度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%8A%A0"><span class="nav-number">2.</span> <span class="nav-text">功能增加</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E8%BF%91%E6%96%87%E7%AB%A0"><span class="nav-number">2.1.</span> <span class="nav-text">最近文章</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -300,19 +300,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h1><h2 id="更改页面透明度"><a href="#更改页面透明度" class="headerlink" title="更改页面透明度"></a>更改页面透明度</h2><p><code>themes\next\source\css\variables\base.styl</code>53行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = white;</span><br><span class="line">$content-bg-color-dark        = $black-dim;</span><br></pre></td></tr></table></figure>
-<p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = rgba(255,255,255,0.7);</span><br><span class="line">$content-bg-color-dark        = rgba(60,60,60,0.75);</span><br></pre></td></tr></table></figure>
-<h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><code>themes\next\source\css\variables\Pisces.styl</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = #f5f7f9;</span><br></pre></td></tr></table></figure>
-<p>更改为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = rgba(250,210,225,0.2);</span><br></pre></td></tr></table></figure>
-<p>以图片做背景后无效了。</p>
-<h2 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h2><p><code>source\_data\variables.styl</code></p>
-<h1 id="功能增加"><a href="#功能增加" class="headerlink" title="功能增加"></a>功能增加</h1><h2 id="最近文章"><a href="#最近文章" class="headerlink" title="最近文章"></a>最近文章</h2><p><code>themes\next\_config.yml</code>31行之后增加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">recent_posts:</span><br><span class="line"># 块标题</span><br><span class="line">  title: 最近文章</span><br><span class="line"># 图标</span><br><span class="line">  icon: fa fa-history</span><br><span class="line"># 最多多少文章链接</span><br><span class="line">  max_count: 5</span><br></pre></td></tr></table></figure>
-<p><code>source\_data\sidebar.njk</code>，<code>source\_data\styles.styl</code></p>
+        <h1 id="美化">美化</h1>
+<h2 id="更改页面透明度">更改页面透明度</h2>
+<p><code>themes\next\source\css\variables\base.styl</code>53行
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = white;</span><br><span class="line">$content-bg-color-dark        = $black-dim;</span><br></pre></td></tr></table></figure> 修改为 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = rgba(255,255,255,0.7);</span><br><span class="line">$content-bg-color-dark        = rgba(60,60,60,0.75);</span><br></pre></td></tr></table></figure> ## 背景颜色
+<code>themes\next\source\css\variables\Pisces.styl</code> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = #f5f7f9;</span><br></pre></td></tr></table></figure>
+更改为 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$body-bg-color                = rgba(250,210,225,0.2);</span><br></pre></td></tr></table></figure> 以图片做背景后无效了。 ## 圆角
+<code>source\_data\variables.styl</code></p>
+<h1 id="功能增加">功能增加</h1>
+<h2 id="最近文章">最近文章</h2>
+<p><code>themes\next\_config.yml</code>31行之后增加 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">recent_posts:</span><br><span class="line"># 块标题</span><br><span class="line">  title: 最近文章</span><br><span class="line"># 图标</span><br><span class="line">  icon: fa fa-history</span><br><span class="line"># 最多多少文章链接</span><br><span class="line">  max_count: 5</span><br></pre></td></tr></table></figure>
+<code>source\_data\sidebar.njk</code>，<code>source\_data\styles.styl</code></p>
 
     </div>
 
@@ -369,14 +367,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">4k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">12 分钟</span>
+    <span title="站点阅读时长">14 分钟</span>
   </span>
 </div>
 

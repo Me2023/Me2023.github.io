@@ -1,83 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>修改日志</title>
+    <url>/2022/11/10/%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/</url>
+    <content><![CDATA[<h1 id="美化">美化</h1>
+<h2 id="更改页面透明度">更改页面透明度</h2>
+<p><code>themes\next\source\css\variables\base.styl</code>53行
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = white;</span><br><span class="line">$content-bg-color-dark        = $black-dim;</span><br></pre></td></tr></table></figure> 修改为 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = rgba(255,255,255,0.7);</span><br><span class="line">$content-bg-color-dark        = rgba(60,60,60,0.75);</span><br></pre></td></tr></table></figure> ## 背景颜色
+<code>themes\next\source\css\variables\Pisces.styl</code> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = #f5f7f9;</span><br></pre></td></tr></table></figure>
+更改为 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = rgba(250,210,225,0.2);</span><br></pre></td></tr></table></figure> 以图片做背景后无效了。 ## 圆角
+<code>source\_data\variables.styl</code></p>
+<h1 id="功能增加">功能增加</h1>
+<h2 id="最近文章">最近文章</h2>
+<p><code>themes\next\_config.yml</code>31行之后增加 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">recent_posts:</span><br><span class="line"># 块标题</span><br><span class="line">  title: 最近文章</span><br><span class="line"># 图标</span><br><span class="line">  icon: fa fa-history</span><br><span class="line"># 最多多少文章链接</span><br><span class="line">  max_count: 5</span><br></pre></td></tr></table></figure>
+<code>source\_data\sidebar.njk</code>，<code>source\_data\styles.styl</code></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>LaTeX 代码备忘</title>
+    <url>/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/</url>
+    <content><![CDATA[<h1 id="数学符号">数学符号</h1>
+<h2 id="括号矩阵相关">括号、矩阵相关</h2>
+<ol type="1">
+<li><p>花括号 <span class="math inline">\(\lbrace A
+\rbrace\)</span></p></li>
+<li><p>大括号 注意，在MathJax，“\”需要替换为“\\”。 <span
+class="math display">\[
+m_{ij}=\left\lbrace
+\begin{aligned}
+     1 &amp; , &amp; \text{if }(a_i, b_j)\in R, \\\\
+     0 &amp; , &amp; \text{if }(a_i, b_j)\notin R.
+\end{aligned}
+\right.
+\]</span></p></li>
+<li><p>矩阵 <span class="math display">\[
+\begin{matrix} 0 &amp; 1 \\\\ 1 &amp; 0 \end{matrix}
+\quad
+\begin{pmatrix} 0 &amp; -i \\\\ i &amp; 0 \end{pmatrix}
+\quad
+\begin{bmatrix} 0 &amp; -1 \\\\ 1 &amp; 0 \end{bmatrix}
+\quad
+\begin{Bmatrix} 1 &amp; 0 \\\\ 0 &amp; -1 \end{Bmatrix}
+\quad
+\begin{vmatrix} a &amp; b \\\\ c &amp; d \end{vmatrix}
+\quad
+\begin{Vmatrix} i &amp; 0 \\\\ 0 &amp; -i \end{Vmatrix}
+\]</span></p></li>
+</ol>
+<h2 id="微积分">微积分</h2>
+<ol type="1">
+<li>无穷 <span class="math inline">\(\infty\)</span></li>
+</ol>
+<h2 id="双目运算符">双目运算符</h2>
+<ol type="1">
+<li>关系运算符</li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(≤\)</span></td>
+<td></td>
+<td><span class="math inline">\(≠\)</span></td>
+<td></td>
+<td><span class="math inline">\(≈\)</span></td>
+<td></td>
+<td><span class="math inline">\(∣\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(≥\)</span></td>
+<td></td>
+<td><span class="math inline">\(≐\)</span></td>
+<td></td>
+<td><span class="math inline">\(≅\)</span></td>
+<td></td>
+<td><span class="math inline">\(∥\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(≪\)</span></td>
+<td></td>
+<td><span class="math inline">\(∼\)</span></td>
+<td></td>
+<td><span class="math inline">\(≡\)</span></td>
+<td></td>
+<td><span class="math inline">\(∝\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(≫\)</span></td>
+<td></td>
+<td><span class="math inline">\(≃\)</span></td>
+<td></td>
+<td><span class="math inline">\(⊥\)</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li><span class="math inline">\(a\ \cancel{R} \ a\)</span></li>
+</ol>
+<h2 id="杂七杂八">杂七杂八</h2>
+<ol type="1">
+<li>花体字母：<span class="math inline">\(\mathbb{R} \quad \mathcal{R}
+\quad \mathscr{R}\)</span></li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程语言/工具</category>
+      </categories>
+      <tags>
+        <tag>LaTeX</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关系和有向图 Relations and Digraphs</title>
     <url>/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/</url>
-    <content><![CDATA[<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="笛卡尔积-product-set-x2F-Cartesian-product"><a href="#笛卡尔积-product-set-x2F-Cartesian-product" class="headerlink" title="笛卡尔积 (product set&#x2F;Cartesian product)"></a><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em></h2><ul>
-<li>$A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$</li>
+    <content><![CDATA[<h1 id="基础概念">基础概念</h1>
+<h2 id="笛卡尔积-product-setcartesian-product"><strong>笛卡尔积</strong>
+<em>(product set/Cartesian product)</em></h2>
+<ul>
+<li><span class="math inline">\(A \times B = \left\lbrace(a,b)|a\in
+A\  and \  b \in B\right\rbrace\)</span> ## <strong>划分</strong>
+<em>(partiton/quotient set)</em></li>
 </ul>
-<h2 id="划分-partiton-x2F-quotient-set"><a href="#划分-partiton-x2F-quotient-set" class="headerlink" title="划分 (partiton&#x2F;quotient set)"></a><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></h2><span id="more"></span>
-
-<h2 id="关系-relation"><a href="#关系-relation" class="headerlink" title="关系 (relation)"></a><strong>关系</strong> <em>(relation)</em></h2><ul>
-<li>A <strong>relation</strong> $R$ from $A$ to $B$ is a subset of $A\times B$. </li>
-<li>If $R\subseteq A\times B$ and $(a,b)\in R$, we say that $a$ <strong>is related to</strong> $b$ <strong>by</strong> $R$, and we also write $a\ R\ b$.</li>
-<li>$R\subseteq A\times A$ <strong>is a relation on</strong> $A$.</li>
-<li><strong>$R$-relative set of</strong> $x$: $R(x) &#x3D; \lbrace y\in B | x\ R\  y\rbrace$.</li>
-<li><strong>$R$-relative set of</strong> $A_1\subseteq A$: $R(A_1) &#x3D; \lbrace y\in B | x\ R\  y$ for some $x$ in $A_1$$\rbrace$.<ul>
-<li><em>Theorem 1:</em><ul>
-<li>If $A_1\subseteq A_2$, then $R(A_1)\subseteq R(A_2)$.</li>
-<li>$R(A_1\cup A_2)&#x3D; R(A_1)\cup R(A_2)$</li>
-<li>$R(A_1\cap A_2)\subseteq R(A_1)\cap R(A_2)$</li>
+<span id="more"></span>
+<h2 id="关系-relation"><strong>关系</strong> <em>(relation)</em></h2>
+<ul>
+<li>A <strong>relation</strong> <span class="math inline">\(R\)</span>
+from <span class="math inline">\(A\)</span> to <span
+class="math inline">\(B\)</span> is a subset of <span
+class="math inline">\(A\times B\)</span>.</li>
+<li>If <span class="math inline">\(R\subseteq A\times B\)</span> and
+<span class="math inline">\((a,b)\in R\)</span>, we say that <span
+class="math inline">\(a\)</span> <strong>is related to</strong> <span
+class="math inline">\(b\)</span> <strong>by</strong> <span
+class="math inline">\(R\)</span>, and we also write <span
+class="math inline">\(a\ R\ b\)</span>.</li>
+<li><span class="math inline">\(R\subseteq A\times A\)</span> <strong>is
+a relation on</strong> <span class="math inline">\(A\)</span>.</li>
+<li><strong><span class="math inline">\(R\)</span>-relative set
+of</strong> <span class="math inline">\(x\)</span>: <span
+class="math inline">\(R(x) = \lbrace y\in B | x\
+R\  y\rbrace\)</span>.</li>
+<li><strong><span class="math inline">\(R\)</span>-relative set
+of</strong> <span class="math inline">\(A_1\subseteq A\)</span>: <span
+class="math inline">\(R(A_1) = \lbrace y\in B | x\ R\  y\)</span> for
+some <span class="math inline">\(x\)</span> in <span
+class="math inline">\(A_1\)</span><span
+class="math inline">\(\rbrace\)</span>.
+<ul>
+<li><em>Theorem 1:</em>
+<ul>
+<li>If <span class="math inline">\(A_1\subseteq A_2\)</span>, then <span
+class="math inline">\(R(A_1)\subseteq R(A_2)\)</span>.</li>
+<li><span class="math inline">\(R(A_1\cup A_2)= R(A_1)\cup
+R(A_2)\)</span></li>
+<li><span class="math inline">\(R(A_1\cap A_2)\subseteq R(A_1)\cap
+R(A_2)\)</span></li>
+</ul></li>
+<li><em>Theorem 2:</em> Let <span class="math inline">\(R\)</span> and
+<span class="math inline">\(S\)</span> be relations from A to B. If
+<span class="math inline">\(R(a)=S(a)\)</span> for all <span
+class="math inline">\(a\)</span> in <span
+class="math inline">\(A\)</span>, then <span class="math inline">\(R=
+S\)</span>.</li>
+</ul></li>
+<li><strong>关系矩阵</strong> matrix of a relation: <span
+class="math inline">\(A=\lbrace a_1, a_2, ..., a_m\rbrace\)</span> and
+<span class="math inline">\(B=\lbrace a_1, a_2, ..., a_m\rbrace\)</span>
+are finite sets, and <span class="math inline">\(R\)</span> is a
+relation from <span class="math inline">\(A\)</span> to <span
+class="math inline">\(B\)</span>, we represent <span
+class="math inline">\(R\)</span> by the <span
+class="math inline">\(m\times n\)</span> matrix <span
+class="math inline">\(M_R=[m_{ij}]\)</span>, which is defined by <span
+class="math display">\[
+  m_{ij}=\left\lbrace
+  \begin{aligned}
+  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\\\
+  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.
+  \end{aligned}
+  \right.
+  \]</span> The matrix <span class="math inline">\(M_R\)</span> is
+called the <strong>matrix of</strong> <span
+class="math inline">\(R\)</span>. ## <strong>有向图</strong>
+<em>(digraphs/directed graph)</em></li>
+<li>vertices, edge, in-degree, out-degree ## <strong>路径</strong>
+<em>(path)</em></li>
+<li>A path of length n in <span class="math inline">\(R\)</span> from
+<span class="math inline">\(a\)</span> to <span
+class="math inline">\(b\)</span> is a finite sequence <span
+class="math inline">\(\pi:a,x_1x_2,...x_{n-1},b\)</span>, beginning with
+<span class="math inline">\(a\)</span> and ending with <span
+class="math inline">\(b\)</span>, such that <span
+class="math inline">\(a\ R\ x_1,\ x_1\ R\ x_2,\ ...,\ x_{n-1}\ R\
+b\)</span>.</li>
+<li>If <span class="math inline">\(n\)</span> is a fixed positive
+integer, <span class="math inline">\(x\ R^n\ y\)</span> means that there
+is a path of length <span class="math inline">\(n\)</span> from <span
+class="math inline">\(x\)</span> to <span
+class="math inline">\(y\)</span> in <span
+class="math inline">\(R\)</span>.
+<ul>
+<li><span class="math inline">\(R^\infty\)</span> is sometimes called
+the <strong>connectivity relation</strong> for <span
+class="math inline">\(R\)</span>.</li>
+<li><em>Theorem 1:</em> If <span class="math inline">\(R\)</span> is a
+relation on <span class="math inline">\(A=\lbrace
+a_1,a_2,...,a_n\rbrace\)</span>, then <span
+class="math inline">\(M_{R^2}=M_R\odot M_R\)</span>.</li>
+<li><em>Theorem 2:</em> For <span class="math inline">\(n\geq 2\)</span>
+and <span class="math inline">\(R\)</span> a relation on a finite set
+<span class="math inline">\(A\)</span>, we have <span
+class="math display">\[M_{R^n}=M_R\odot M_R\odot ... \odot M_R\quad
+(n\text{ factors}).\]</span></li>
+</ul></li>
 </ul>
-</li>
-<li><em>Theorem 2:</em> Let $R$ and $S$ be relations from A to B. If $R(a)&#x3D;S(a)$ for all $a$ in $A$, then $R&#x3D; S$.</li>
-</ul>
-</li>
-<li><strong>关系矩阵</strong> matrix of a relation: $A&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ and $B&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ are finite sets, and $R$ is a relation from $A$ to $B$, we represent $R$ by the $m\times n$ matrix $M_R&#x3D;[m_{ij}]$, which is defined by<br>  $$<br>  m_{ij}&#x3D;\left\lbrace<br>  \begin{aligned}<br>  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\<br>  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.<br>  \end{aligned}<br>  \right.<br>  $$<br>  The matrix $M_R$ is called the <strong>matrix of</strong> $R$.</li>
-</ul>
-<h2 id="有向图-digraphs-x2F-directed-graph"><a href="#有向图-digraphs-x2F-directed-graph" class="headerlink" title="有向图 (digraphs&#x2F;directed graph)"></a><strong>有向图</strong> <em>(digraphs&#x2F;directed graph)</em></h2><ul>
-<li>vertices, edge, in-degree, out-degree</li>
-</ul>
-<h2 id="路径-path"><a href="#路径-path" class="headerlink" title="路径 (path)"></a><strong>路径</strong> <em>(path)</em></h2><ul>
-<li>A path of length n in $R$ from $a$ to $b$ is a finite sequence $\pi:a,x_1x_2,…x_{n-1},b$, beginning with $a$ and ending with $b$, such that $a\ R\ x_1,\ x_1\ R\ x_2,\ …,\ x_{n-1}\ R\ b$.</li>
-<li>If $n$ is a fixed positive integer, $x\ R^n\ y$ means that there is a path of length $n$ from $x$ to $y$ in $R$.<ul>
-<li>$R^\infty$ is sometimes called the <strong>connectivity relation</strong> for $R$.</li>
-<li><em>Theorem 1:</em> If $R$ is a relation on $A&#x3D;\lbrace a_1,a_2,…,a_n\rbrace$, then $M_{R^2}&#x3D;M_R\odot M_R$.</li>
-<li><em>Theorem 2:</em> For $n\geq 2$ and $R$ a relation on a finite set $A$, we have $$M_{R^n}&#x3D;M_R\odot M_R\odot … \odot M_R\quad (n\text{ factors}).$$</li>
-</ul>
-</li>
-</ul>
-<h1 id="关系的特性"><a href="#关系的特性" class="headerlink" title="关系的特性"></a>关系的特性</h1><h2 id="自反性-reflexive-and-irreflexive"><a href="#自反性-reflexive-and-irreflexive" class="headerlink" title="自反性 (reflexive and irreflexive)"></a>自反性 <em>(reflexive and irreflexive)</em></h2><ul>
-<li>A relation $R$ on a set $A$ is <strong>reflexive</strong> if $(a,a)\in R$ for all $a\in A$, that is, if $a\ R\ a$ for all $a \in A$.<ul>
+<h1 id="关系的特性">关系的特性</h1>
+<h2 id="自反性-reflexive-and-irreflexive">自反性 <em>(reflexive and
+irreflexive)</em></h2>
+<ul>
+<li>A relation <span class="math inline">\(R\)</span> on a set <span
+class="math inline">\(A\)</span> is <strong>reflexive</strong> if <span
+class="math inline">\((a,a)\in R\)</span> for all <span
+class="math inline">\(a\in A\)</span>, that is, if <span
+class="math inline">\(a\ R\ a\)</span> for all <span
+class="math inline">\(a \in A\)</span>.
+<ul>
 <li>关系矩阵对角线上所有元素值都为1。</li>
-</ul>
-</li>
-<li>A relation $R$ on a set $A$ is <strong>irreflexive</strong> if $a\ \cancel{R} \ a$ for all $a \in A$.<ul>
+</ul></li>
+<li>A relation <span class="math inline">\(R\)</span> on a set <span
+class="math inline">\(A\)</span> is <strong>irreflexive</strong> if
+<span class="math inline">\(a\ \cancel{R} \ a\)</span> for all <span
+class="math inline">\(a \in A\)</span>.
+<ul>
 <li>关系矩阵对角线上所有元素值都为0。</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h2 id="对称性-symmetric-asymmetric-and-antisymmetric"><a href="#对称性-symmetric-asymmetric-and-antisymmetric" class="headerlink" title="对称性 (symmetric, asymmetric and antisymmetric)"></a>对称性 <em>(symmetric, asymmetric and antisymmetric)</em></h2><ul>
-<li>对称 A relation $R$ on a set $A$ is <strong>symmetric</strong> if whenever $a\ R \ b$, then $b\ R\ a$.<ul>
+<h2 id="对称性-symmetric-asymmetric-and-antisymmetric">对称性
+<em>(symmetric, asymmetric and antisymmetric)</em></h2>
+<ul>
+<li>对称 A relation <span class="math inline">\(R\)</span> on a set
+<span class="math inline">\(A\)</span> is <strong>symmetric</strong> if
+whenever <span class="math inline">\(a\ R \ b\)</span>, then <span
+class="math inline">\(b\ R\ a\)</span>.
+<ul>
 <li>关系矩阵是对称矩阵。</li>
-</ul>
-</li>
-<li>非对称 A relation $R$ on a set $A$ is <strong>asymmetric</strong> if whenever $a\ R \ b$, then $b\ \cancel{R}\ a$.<ul>
+</ul></li>
+<li>非对称 A relation <span class="math inline">\(R\)</span> on a set
+<span class="math inline">\(A\)</span> is <strong>asymmetric</strong> if
+whenever <span class="math inline">\(a\ R \ b\)</span>, then <span
+class="math inline">\(b\ \cancel{R}\ a\)</span>.
+<ul>
 <li>关系矩阵对角线全为0；关于对角线对称的元素值不能全为1。</li>
-</ul>
-</li>
-<li>反对称 A relation $R$ on a set $A$ is <strong>antisymmetric</strong> if whenever $a\ R \ b$ and $b\ R \ a$, then $a&#x3D;b$. <ul>
+</ul></li>
+<li>反对称 A relation <span class="math inline">\(R\)</span> on a set
+<span class="math inline">\(A\)</span> is <strong>antisymmetric</strong>
+if whenever <span class="math inline">\(a\ R \ b\)</span> and <span
+class="math inline">\(b\ R \ a\)</span>, then <span
+class="math inline">\(a=b\)</span>.
+<ul>
 <li>关系矩阵对角线不限制；除对角线外，关于对角线对称的元素值不能全为1。</li>
+</ul></li>
 </ul>
-</li>
+<h2 id="传递性-transitive">传递性 <em>(transitive)</em></h2>
+<ul>
+<li>A relation <span class="math inline">\(R\)</span> on a set <span
+class="math inline">\(A\)</span> is <strong>transitive</strong> if
+whenever <span class="math inline">\(a\ R \ b\)</span> and <span
+class="math inline">\(b\ R \ c\)</span>, then <span
+class="math inline">\(a\ R\ c\)</span>.
+<ul>
+<li><em>Theorem 1:</em> A relation <span
+class="math inline">\(R\)</span> is transitive iff <span
+class="math inline">\(R^n\subseteq R\)</span> for all <span
+class="math inline">\(n\geq 1\)</span>.</li>
+<li><em>Theorem 2:</em> in terms of <span
+class="math inline">\(R\)</span>-relative sets
+<ul>
+<li>Reflexivity of <span class="math inline">\(R\)</span> means that
+<span class="math inline">\(a\in R(a)\)</span> for all <span
+class="math inline">\(a\)</span> in <span
+class="math inline">\(A\)</span>.</li>
+<li>Symmetry of <span class="math inline">\(R\)</span> means that <span
+class="math inline">\(a\in R(b)\)</span> iff <span
+class="math inline">\(b\in R(a)\)</span>.</li>
+<li>Transitivity of <span class="math inline">\(R\)</span> means that if
+<span class="math inline">\(b\in R(a)\)</span> and <span
+class="math inline">\(c\in R(b)\)</span>, then <span
+class="math inline">\(c\in R(a)\)</span>.</li>
+</ul></li>
+</ul></li>
 </ul>
-<h2 id="传递性-transitive"><a href="#传递性-transitive" class="headerlink" title="传递性 (transitive)"></a>传递性 <em>(transitive)</em></h2><ul>
-<li>A relation $R$ on a set $A$ is <strong>transitive</strong> if whenever $a\ R \ b$ and $b\ R \ c$, then $a\ R\ c$.<ul>
-<li><em>Theorem 1:</em> A relation $R$ is transitive iff $R^n\subseteq R$ for all $n\geq 1$.</li>
-<li><em>Theorem 2:</em> in terms of $R$-relative sets<ul>
-<li>Reflexivity of $R$ means that $a\in R(a)$ for all $a$ in $A$.</li>
-<li>Symmetry of $R$ means that $a\in R(b)$ iff $b\in R(a)$.</li>
-<li>Transitivity of $R$ means that if $b\in R(a)$ and $c\in R(b)$, then $c\in R(a)$.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="等价关系-equivalence-relation"><a href="#等价关系-equivalence-relation" class="headerlink" title="等价关系 (equivalence relation)"></a>等价关系 <em>(equivalence relation)</em></h2><ul>
-<li>A relation $R$ on a set $A$ is called an <strong>equivalence relation</strong> if it is reflexive, symmetric, and transitive.<ul>
-<li><em>Theorem 1:</em> Let $\mathcal{P}$ be a partition of a set $A$ (Sets in $\mathcal{P}$ are called the blocks of $\mathcal{P}$). Define the relation $R$ on $A$ as follows:<br>$$<br>a\ R\ b\qquad \text{iff $a$ and $b$ are members of the same block.}<br>$$<br>Then $R$ is an equivalence relation on $A$.</li>
-</ul>
-</li>
+<h2 id="等价关系-equivalence-relation">等价关系 <em>(equivalence
+relation)</em></h2>
+<ul>
+<li>A relation <span class="math inline">\(R\)</span> on a set <span
+class="math inline">\(A\)</span> is called an <strong>equivalence
+relation</strong> if it is reflexive, symmetric, and transitive.
+<ul>
+<li><em>Theorem 1:</em> Let <span
+class="math inline">\(\mathcal{P}\)</span> be a partition of a set <span
+class="math inline">\(A\)</span> (Sets in <span
+class="math inline">\(\mathcal{P}\)</span> are called the blocks of
+<span class="math inline">\(\mathcal{P}\)</span>). Define the relation
+<span class="math inline">\(R\)</span> on <span
+class="math inline">\(A\)</span> as follows: <span
+class="math display">\[
+a\ R\ b\qquad \text{iff $a$ and $b$ are members of the same block.}
+\]</span> Then <span class="math inline">\(R\)</span> is an equivalence
+relation on <span class="math inline">\(A\)</span>.</li>
+</ul></li>
 </ul>
 ]]></content>
       <categories>
@@ -89,205 +325,192 @@
       </tags>
   </entry>
   <entry>
+    <title>C/C++ 动态内存分配</title>
+    <url>/2022/11/12/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/</url>
+    <content><![CDATA[<h1 id="c-内存管理">C 内存管理</h1>
+<p>在程序的执行期间经常需要动态分配内存。</p>
+<p>具体表现有在<em>函数体内声明</em>了一个变量、结构体或数组等，这样的内存是分配是由系统操作分配在<strong>栈</strong>上的，在执行完函数后，函数体内开头所声明的变量、结构体或数组所持有的内存空间都会被释放。所以要将函数体内的执行结果返回或反映到函数体外，一般是行不通的（不考虑全局变量）。</p>
+<p>还有一种是由coder们调用 <code>malloc()</code>
+等内存分配函数在<strong>堆</strong>上开辟新内存块，这些内存块会一起存在直至调用
+<code>free()</code>
+函数去释放。作用域广了，但也引入了潜在的内存泄露（程序卡顿）和野指针（程序
+crash）问题。 -
+很多时候，我们无法提前预知需要多少内存来存储某个定义变量中的特定信息，所需内存的大小需要在运行时才能确定。这时便需要动态分配内存。（但现在
+C/C++ 已经支持用变量定义数组长度了）</p>
+<h2 id="动态分配内存">动态分配内存</h2>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> *<span class="title function_">malloc</span><span class="params">(<span class="type">int</span> size)</span>; 和 <span class="type">void</span> *<span class="title function_">calloc</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span> size)</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>malloc</code>: 在内存的动态存储区（堆区）分配 1 块长度为 size
+的内存空间。返回该区域首地址。</li>
+<li><code>calloc</code>: 在内存的动态存储区（堆区）分配 num 块长度为
+size 的内存空间，并将每一个字节都<em>初始化</em>为 0。返回该区域首地址。
+这些函数可以在 <code>&lt;stdlib.h&gt;</code> 头文件中找到。 它们返回的是
+void * 类型，也就是说，如果我们要为 int
+或者其他类型的数据分配空间，必须显式强制转换。 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> * ip_a;</span><br><span class="line">ip_a = (<span class="type">int</span> *)<span class="built_in">malloc</span>( <span class="keyword">sizeof</span> (<span class="type">int</span>) * <span class="number">5</span> );</span><br><span class="line">或</span><br><span class="line">ip_a = (<span class="type">int</span> *)<span class="built_in">calloc</span>( <span class="number">5</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>) );</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="重新调整内存的大小释放内存">重新调整内存的大小、释放内存</h2>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> *<span class="title function_">realloc</span><span class="params">(<span class="type">void</span> *address, <span class="type">int</span> newsize)</span>; 和 	<span class="type">void</span> *<span class="title function_">calloc</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span> size)</span>;</span><br></pre></td></tr></table></figure>
+<p>在不需要该内存时，都应调用函数 <code>free()</code> 来释放。</p>
+<h2 id="示例动态数组的定义和使用">示例：动态数组的定义和使用</h2>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 定义动态数组指针，动态分配数组空间</span></span><br><span class="line">    <span class="type">int</span> *A, *T;</span><br><span class="line">    <span class="type">int</span> i, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    A = (<span class="type">int</span> *)<span class="built_in">malloc</span>( n * <span class="keyword">sizeof</span>(<span class="type">int</span>) );</span><br><span class="line">    <span class="keyword">if</span> (A == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;存储分配失败！\n&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用指针直接存</span></span><br><span class="line">    T = A;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= n<span class="number">-2</span>; i++) &#123;</span><br><span class="line">        *T = i + <span class="number">1</span>;</span><br><span class="line">        T++;</span><br><span class="line">    &#125;</span><br><span class="line">    *T = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用指针直接取</span></span><br><span class="line">    T = A;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i&lt;= n<span class="number">-1</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *T);</span><br><span class="line">        T++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 动态释放数组空间</span></span><br><span class="line">    <span class="built_in">free</span>(A);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="c-内存管理-1">C++ 内存管理</h1>
+<h2 id="new-和-delete-运算符"><code>new</code> 和 <code>delete</code>
+运算符</h2>
+<p>在 C++ 中，使用 <code>new</code>
+运算符为给定类型的变量在运行时分配堆内的内存，这会返回所分配的空间地址。
+如果未成功，<code>new</code> 将返回 0 或引发异常。</p>
+<p><code>delete</code> 运算符删除之前由 <code>new</code>
+运算符分配的内存。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span>* pvalue  = <span class="literal">NULL</span>; <span class="comment">// 初始化为 null 的指针</span></span><br><span class="line">pvalue  = <span class="keyword">new</span> <span class="type">double</span>;   <span class="comment">// 为变量请求内存</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 处理异常</span></span><br><span class="line"><span class="type">double</span>* pvalue  = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">if</span>( !(pvalue  = <span class="keyword">new</span> <span class="type">double</span> ))</span><br><span class="line">&#123;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Error: out of memory.&quot;</span> &lt;&lt;endl;</span><br><span class="line">   <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> pvalue;          <span class="comment">// 释放 pvalue 所指向的内存</span></span><br></pre></td></tr></table></figure>
+<h2 id="数组的动态内存分配">数组的动态内存分配</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span>* pvalue  = <span class="literal">NULL</span>;   <span class="comment">// 初始化为 null 的指针</span></span><br><span class="line">pvalue  = <span class="keyword">new</span> <span class="type">char</span>[<span class="number">20</span>]; <span class="comment">// 为变量请求内存</span></span><br><span class="line"><span class="keyword">delete</span> [] pvalue;       <span class="comment">// 删除 pvalue 所指向的数组</span></span><br></pre></td></tr></table></figure>
+<h2 id="示例分配和释放字符数组">示例：分配和释放字符数组</h2>
+<p>下面的代码示例分配类 <code>CName</code>
+的一个字符数组和一个对象，然后释放它们。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CName</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">enum</span> &#123;</span><br><span class="line">      sizeOfBuffer = <span class="number">256</span></span><br><span class="line">   &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="type">char</span> m_szFirst[sizeOfBuffer];</span><br><span class="line">   <span class="type">char</span> m_szLast[sizeOfBuffer];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="function"><span class="type">void</span> <span class="title">SetName</span><span class="params">(<span class="type">char</span>* pszFirst, <span class="type">char</span>* pszLast)</span> </span>&#123;</span><br><span class="line">     <span class="built_in">strcpy_s</span>(m_szFirst, sizeOfBuffer, pszFirst);</span><br><span class="line">     <span class="built_in">strcpy_s</span>(m_szLast, sizeOfBuffer, pszLast);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="comment">// Allocate memory for the array</span></span><br><span class="line">   <span class="type">char</span>* pCharArray = <span class="keyword">new</span> <span class="type">char</span>[CName::sizeOfBuffer];</span><br><span class="line">   <span class="built_in">strcpy_s</span>(pCharArray, CName::sizeOfBuffer, <span class="string">&quot;Array of characters&quot;</span>);</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Deallocate memory for the array</span></span><br><span class="line">   <span class="keyword">delete</span> [] pCharArray;</span><br><span class="line">   pCharArray = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Allocate memory for the object</span></span><br><span class="line">   CName* pName = <span class="keyword">new</span> CName;</span><br><span class="line">   pName-&gt;<span class="built_in">SetName</span>(<span class="string">&quot;Firstname&quot;</span>, <span class="string">&quot;Lastname&quot;</span>);</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Deallocate memory for the object</span></span><br><span class="line">   <span class="keyword">delete</span> pName;</span><br><span class="line">   pName = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="示例对使用-new-分配的对象进行初始化">示例：对使用
+<code>new</code> 分配的对象进行初始化</h2>
+<p>以下示例说明了如何将初始化表达式与 <code>new</code> 运算符配合使用。
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Acct</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// Define default constructor and a constructor that accepts</span></span><br><span class="line">    <span class="comment">//  an initial balance.</span></span><br><span class="line">    <span class="built_in">Acct</span>() &#123;</span><br><span class="line">        balance = <span class="number">0.0</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">Acct</span>( <span class="type">double</span> init_balance ) &#123; </span><br><span class="line">        balance = init_balance; </span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">double</span> balance;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Acct *CheckingAcct = <span class="keyword">new</span> Acct;</span><br><span class="line">    Acct *SavingsAcct = <span class="keyword">new</span> <span class="built_in">Acct</span> ( <span class="number">34.98</span> );</span><br><span class="line">    <span class="type">double</span> *HowMuch = <span class="keyword">new</span> <span class="type">double</span> &#123; <span class="number">43.0</span> &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>编程语言/工具</category>
+      </categories>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构：图的最短路径算法</title>
     <url>/2022/11/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E5%9B%BE%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="用到的图的类定义（邻接矩阵存储）"><a href="#用到的图的类定义（邻接矩阵存储）" class="headerlink" title="用到的图的类定义（邻接矩阵存储）"></a>用到的图的类定义（邻接矩阵存储）</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> numVertices, numEdges;</span><br><span class="line">    <span class="type">char</span> VerticesList[maxVertices];</span><br><span class="line">    <span class="type">int</span> Edge[maxVertices][maxVertices];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getVertexPos</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;         <span class="comment">// 从顶点数据值找出顶点号</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">firstNeighbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;        <span class="comment">// 给出顶点 v 的第一个邻接顶点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">nexNeightbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;  <span class="comment">// 给出顶点 v 某邻接顶点 w 的下一个邻接顶点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfVertices</span><span class="params">(MGraph&amp; G)</span></span>; </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfEdges</span><span class="params">(MGraph&amp; G)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">char</span> <span class="title">getValue</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getWeight</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="无权最短路径"><a href="#无权最短路径" class="headerlink" title="无权最短路径"></a>无权最短路径</h1>
+    <content><![CDATA[<h1
+id="用到的图的类定义邻接矩阵存储">用到的图的类定义（邻接矩阵存储）</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> numVertices, numEdges;</span><br><span class="line">    <span class="type">char</span> VerticesList[maxVertices];</span><br><span class="line">    <span class="type">int</span> Edge[maxVertices][maxVertices];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getVertexPos</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;         <span class="comment">// 从顶点数据值找出顶点号</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">firstNeighbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;        <span class="comment">// 给出顶点 v 的第一个邻接顶点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">nexNeightbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;  <span class="comment">// 给出顶点 v 某邻接顶点 w 的下一个邻接顶点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfVertices</span><span class="params">(MGraph&amp; G)</span></span>; </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfEdges</span><span class="params">(MGraph&amp; G)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">char</span> <span class="title">getValue</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getWeight</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="无权最短路径">无权最短路径</h1>
 
 <p>图的广度优先搜索</p>
 <ul>
 <li>相关：树的层序遍历</li>
 </ul>
-<h1 id="非负权值的单源最短路径：Dijkstra-算法"><a href="#非负权值的单源最短路径：Dijkstra-算法" class="headerlink" title="非负权值的单源最短路径：Dijkstra 算法"></a>非负权值的单源最短路径：Dijkstra 算法</h1><p>按路径长度的递增次序，逐步产生最短路径。本质上是贪心策略。在权值非负（所选最短路径长度<em>递增</em>）的情况下，Dijkstra算法所找的局部最优确实是全局最优。</p>
-<ul>
-<li>下一条最短路径总是通过“已产生的最短路径再扩充某一条边”得到。<ul>
-<li>如果觉得不对劲，再次注意，产生的最短路径的长度是<em>递增</em>的。</li>
-</ul>
-</li>
-</ul>
-<ol>
+<h1
+id="非负权值的单源最短路径dijkstra-算法">非负权值的单源最短路径：Dijkstra
+算法</h1>
+<p>Dijkstra
+算法按路径长度的<strong>递增次序</strong>，逐步产生最短路径。本质上是贪心策略。在权值非负（所选最短路径长度<em>递增</em>）的情况下，Dijkstra算法所找的局部最优确实是全局最优。
+-
+下一条最短路径总是通过“<strong>已产生的最短路径再扩充某一条边</strong>”得到。
+- 如果觉得不对劲，再次注意，产生的最短路径的长度是<em>递增</em>的。</p>
+<ol type="1">
 <li>初始化：源点到源点的最短路径显然已找到，标记源点，以之为出发点，进行后续操作。</li>
 <li>每次从未标记的顶点中，选择到达源点路径长度最短的顶点，进行标记，即该顶点已找到最短路径。</li>
 <li>经由刚找到的最短路径，计算其后续邻接顶点（不包含已被标记的顶点）的路径长度，如果该长度比已知到该邻接顶点的长度更短，更新记录该长度和路径。</li>
 <li>重复 2~3 直到所有顶点都被标记。</li>
 </ol>
-<h2 id="代码实现：Dijkstra-算法"><a href="#代码实现：Dijkstra-算法" class="headerlink" title="代码实现：Dijkstra 算法"></a>代码实现：Dijkstra 算法</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ShortestPath</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> dist[], <span class="type">int</span> path[])</span> </span>&#123;</span><br><span class="line"><span class="comment">// 求顶点 v 到图 G 各顶点的最短路径，算法返回 dist[] 和 path[]</span></span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">numberOfVertices</span>(G);</span><br><span class="line">    inst S[maxVertices];            <span class="comment">// 最短路径标记顶点集</span></span><br><span class="line">    <span class="type">int</span> i, j, k;</span><br><span class="line">    weight w, min;</span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        dist[i] = G.Edge[v][i];     <span class="comment">// 路径长度初始化</span></span><br><span class="line">        S[i] = <span class="number">0</span>;                   <span class="comment">// 标记初始化</span></span><br><span class="line">        <span class="keyword">if</span> (i != v &amp;&amp; dist[i] &lt; maxWeight) &#123;</span><br><span class="line">            path[i] = v;            <span class="comment">// 路径数组初始化（v 的邻接顶点）</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> path[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s[v] = <span class="number">1</span>; dist[v] = <span class="number">0</span>;          <span class="comment">// 到顶点 v 已找到最短路径</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 逐个求 v 到其他顶点最短路径</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n<span class="number">-1</span>; i++) &#123;</span><br><span class="line">        min = maxWeight; </span><br><span class="line">        <span class="type">int</span> u = v;                  <span class="comment">// 初始化</span></span><br><span class="line">        <span class="comment">// 找不在S中具有最短路径的顶点 u</span></span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!S[j] &amp;&amp; dist[j] &lt; min) &#123;</span><br><span class="line">                u = j;</span><br><span class="line">                min = dist[j];</span><br><span class="line">            &#125;                       </span><br><span class="line">        &#125;                           </span><br><span class="line">        S[u] = <span class="number">1</span>;                   <span class="comment">// 将 u 加入集合 S</span></span><br><span class="line">        <span class="comment">// 修改经过 u 到其他顶点的路径长度</span></span><br><span class="line">        <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            w = G.Edge[u][k];</span><br><span class="line">            <span class="keyword">if</span> (!S[k] &amp;&amp; w &lt; maxWeight &amp;&amp; dist[u] + w &lt; dist[k]) &#123;</span><br><span class="line">                <span class="comment">// 邻接顶点 k 未加入 S，且经过 u 到 k 比已知路径更短</span></span><br><span class="line">                dist[k] = dist[u] + w;</span><br><span class="line">                path[k] = u;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="代码实现：从-path-数据读取最短路径"><a href="#代码实现：从-path-数据读取最短路径" class="headerlink" title="代码实现：从 path 数据读取最短路径"></a>代码实现：从 path 数据读取最短路径</h2><h1 id="任意权值的单源最短路径：Bellman-Ford-算法"><a href="#任意权值的单源最短路径：Bellman-Ford-算法" class="headerlink" title="任意权值的单源最短路径：Bellman-Ford 算法"></a>任意权值的单源最短路径：Bellman-Ford 算法</h1><h1 id="正权值的所有顶点之间最短路径：Floyd-算法"><a href="#正权值的所有顶点之间最短路径：Floyd-算法" class="headerlink" title="正权值的所有顶点之间最短路径：Floyd 算法"></a>正权值的所有顶点之间最短路径：Floyd 算法</h1>]]></content>
+<h2 id="代码实现dijkstra-算法">代码实现：Dijkstra 算法</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ShortestPath</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> dist[], <span class="type">int</span> path[])</span> </span>&#123;</span><br><span class="line"><span class="comment">// 求顶点 v 到图 G 各顶点的最短路径，算法返回 dist[] 和 path[]</span></span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">numberOfVertices</span>(G);</span><br><span class="line">    inst S[maxVertices];            <span class="comment">// 最短路径标记顶点集</span></span><br><span class="line">    <span class="type">int</span> i, j, k;</span><br><span class="line">    weight w, min;</span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        dist[i] = G.Edge[v][i];     <span class="comment">// 路径长度初始化</span></span><br><span class="line">        S[i] = <span class="number">0</span>;                   <span class="comment">// 标记初始化</span></span><br><span class="line">        <span class="keyword">if</span> (i != v &amp;&amp; dist[i] &lt; maxWeight) &#123;</span><br><span class="line">            path[i] = v;            <span class="comment">// 路径数组初始化（v 的邻接顶点）</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> path[i] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    s[v] = <span class="number">1</span>; dist[v] = <span class="number">0</span>;          <span class="comment">// 到顶点 v 已找到最短路径</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 逐个求 v 到其他顶点最短路径</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n<span class="number">-1</span>; i++) &#123;</span><br><span class="line">        min = maxWeight; </span><br><span class="line">        <span class="type">int</span> u = v;                  <span class="comment">// 初始化</span></span><br><span class="line">        <span class="comment">// 找不在S中具有最短路径的顶点 u</span></span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!S[j] &amp;&amp; dist[j] &lt; min) &#123;</span><br><span class="line">                u = j;</span><br><span class="line">                min = dist[j];</span><br><span class="line">            &#125;                       </span><br><span class="line">        &#125;                           </span><br><span class="line">        S[u] = <span class="number">1</span>;                   <span class="comment">// 将 u 加入集合 S</span></span><br><span class="line">        <span class="comment">// 修改经过 u 到其他顶点的路径长度</span></span><br><span class="line">        <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            w = G.Edge[u][k];</span><br><span class="line">            <span class="keyword">if</span> (!S[k] &amp;&amp; w &lt; maxWeight &amp;&amp; dist[u] + w &lt; dist[k]) &#123;</span><br><span class="line">                <span class="comment">// 邻接顶点 k 未加入 S，且经过 u 到 k 比已知路径更短</span></span><br><span class="line">                dist[k] = dist[u] + w;</span><br><span class="line">                path[k] = u;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码实现从-path-数据读取最短路径">代码实现：从 path
+数据读取最短路径</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">printShortestPath</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, Weight dist[], <span class="type">int</span> path[])</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;从顶点[%c]到其他各顶点的最短路径为：\n&quot;</span>, G.VerticesList[v]);</span><br><span class="line">    <span class="type">int</span> i, j, k, n = <span class="built_in">numOfVertices</span>(G);</span><br><span class="line">    <span class="type">int</span> d[maxVertices];             <span class="comment">// 用于倒序存储最短路径上的顶点</span></span><br><span class="line">    <span class="comment">// 逐个顶点输出从 v0 到 v1的最短路径</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="comment">// “倒序”存储该最短路径上的顶点到 d[] 并输出</span></span><br><span class="line">        <span class="keyword">if</span> (i != v) &#123;               </span><br><span class="line">            <span class="comment">// 存储部分</span></span><br><span class="line">            j = i; k = <span class="number">0</span>;           <span class="comment">// j 用于沿路径回溯直到源点</span></span><br><span class="line">            <span class="keyword">while</span> (j != v) &#123;</span><br><span class="line">                d[k++] = j;</span><br><span class="line">                j = path[j];        <span class="comment">// path[j] j 在最短路径上的“前一顶点”</span></span><br><span class="line">            &#125;</span><br><span class="line">            d[k++] = v;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 输出部分</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;到顶点[%c]的最短路径为：&quot;</span>, G.VerticesList[i]);</span><br><span class="line">            <span class="keyword">while</span>(k &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%c &quot;</span>, G.VerticesList[d[--k]]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n最短路径长度为：%d\n&quot;</span>, dist[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1
+id="任意权值的单源最短路径bellman-ford-算法">任意权值的单源最短路径：Bellman-Ford
+算法</h1>
+<p>Dijkstra
+算法属于贪心算法，求得局部最优解不一定能得到全局最优解。Bellman-Ford
+算法从源点逐次绕过其他顶点，不断缩短到达终点的最短路径长度。</p>
+<ul>
+<li>当图G没有带负权值边的回路时，有 <span
+class="math inline">\(n\)</span>
+个顶点的图中任意两个顶点之间如果存在最短路径，此路径最多有 <span
+class="math inline">\(n-1\)</span>条边。</li>
+<li>为此，构造最短路径长度数组序列 dist<span
+class="math inline">\(^1\)</span>[<span
+class="math inline">\(u\)</span>]，dist<span
+class="math inline">\(^2\)</span>[<span
+class="math inline">\(u\)</span>]，…，dist<span
+class="math inline">\(^{n-1}\)</span>[<span
+class="math inline">\(u\)</span>]。
+<ul>
+<li>dist<span class="math inline">\(^{n-1}\)</span>[<span
+class="math inline">\(u\)</span>] 是从源点 <span
+class="math inline">\(v\)</span> 出发最多经过不构成带负长度边回路的
+<span class="math inline">\(n-1\)</span> 条边到达终点 <span
+class="math inline">\(u\)</span>
+的最短路径的长度。算法的<strong>最终目的</strong>是计算出 dist<span
+class="math inline">\(^{n-1}\)</span>[<span
+class="math inline">\(u\)</span>]。</li>
+</ul></li>
+<li>可以用<strong>递推方式</strong>计算 dist<span
+class="math inline">\(^{k}\)</span>[<span
+class="math inline">\(u\)</span>]。
+<ul>
+<li>设已经求出各顶点 <span class="math inline">\(j\)</span> 的 dist<span
+class="math inline">\(^{k-1}\)</span>[<span
+class="math inline">\(j\)</span>]，然后在邻接矩阵中取出 G.Edge[<span
+class="math inline">\(j\)</span>][<span
+class="math inline">\(u\)</span>]，计算 min{dist<span
+class="math inline">\(^{k-1}\)</span>[<span
+class="math inline">\(j\)</span>] + G.Edge[<span
+class="math inline">\(j\)</span>][<span
+class="math inline">\(u\)</span>]}，就可以得到从源点 <span
+class="math inline">\(v\)</span>
+<strong>绕过各个顶点</strong>，最多经过不构成带负长度边回路的 <span
+class="math inline">\(k\)</span> 条边到达终点 <span
+class="math inline">\(u\)</span> 的最短路径的长度，用它与 dist<span
+class="math inline">\(^{k-1}\)</span>[<span
+class="math inline">\(u\)</span>] 比较，取小者作为 dist<span
+class="math inline">\(^{k}\)</span>[<span
+class="math inline">\(u\)</span>] 的值。</li>
+<li>dist<span class="math inline">\(^{1}\)</span>[<span
+class="math inline">\(u\)</span>] = G.Edge[<span
+class="math inline">\(v\)</span>][<span
+class="math inline">\(u\)</span>] dist<span
+class="math inline">\(^{k}\)</span>[<span
+class="math inline">\(u\)</span>] = min{dist<span
+class="math inline">\(^{k-1}\)</span>[<span
+class="math inline">\(u\)</span>], min{dist<span
+class="math inline">\(^{k-1}\)</span>[<span
+class="math inline">\(j\)</span>] + G.Edge[<span
+class="math inline">\(j\)</span>][<span
+class="math inline">\(u\)</span>]}}</li>
+</ul></li>
+</ul>
+<h1
+id="正权值的所有顶点之间最短路径floyd-算法">正权值的所有顶点之间最短路径：Floyd
+算法</h1>
+]]></content>
       <categories>
         <category>CS 专业基础课</category>
       </categories>
       <tags>
         <tag>图论算法</tag>
+        <tag>C/C++</tag>
         <tag>数据结构</tag>
-        <tag>C/C++</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>C/C++ 动态内存分配</title>
-    <url>/2022/11/12/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/</url>
-    <content><![CDATA[<h1 id="C-内存管理"><a href="#C-内存管理" class="headerlink" title="C 内存管理"></a>C 内存管理</h1><p>在程序的执行期间经常需要动态分配内存。</p>
-<p>具体表现有在<em>函数体内声明</em>了一个变量、结构体或数组等，这样的内存是分配是由系统操作分配在<strong>栈</strong>上的，在执行完函数后，函数体内开头所声明的变量、结构体或数组所持有的内存空间都会被释放。所以要将函数体内的执行结果返回或反映到函数体外，一般是行不通的（不考虑全局变量）。</p>
-<p>还有一种是由coder们调用 <code>malloc()</code> 等内存分配函数在<strong>堆</strong>上开辟新内存块，这些内存块会一起存在直至调用 <code>free()</code> 函数去释放。作用域广了，但也引入了潜在的内存泄露（程序卡顿）和野指针（程序 crash）问题。</p>
-<ul>
-<li>很多时候，我们无法提前预知需要多少内存来存储某个定义变量中的特定信息，所需内存的大小需要在运行时才能确定。这时便需要动态分配内存。（但现在 C&#x2F;C++ 已经支持用变量定义数组长度了）</li>
-</ul>
-<h2 id="动态分配内存"><a href="#动态分配内存" class="headerlink" title="动态分配内存"></a>动态分配内存</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> *<span class="title function_">malloc</span><span class="params">(<span class="type">int</span> size)</span>; 和 <span class="type">void</span> *<span class="title function_">calloc</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span> size)</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>malloc</code>: 在内存的动态存储区（堆区）分配 1 块长度为 size 的内存空间。返回该区域首地址。</li>
-<li><code>calloc</code>: 在内存的动态存储区（堆区）分配 num 块长度为 size 的内存空间，并将每一个字节都<em>初始化</em>为 0。返回该区域首地址。<br>这些函数可以在 <code>&lt;stdlib.h&gt;</code> 头文件中找到。<br>它们返回的是 void * 类型，也就是说，如果我们要为 int 或者其他类型的数据分配空间，必须显式强制转换。<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> * ip_a;</span><br><span class="line">ip_a = (<span class="type">int</span> *)<span class="built_in">malloc</span>( <span class="keyword">sizeof</span> (<span class="type">int</span>) * <span class="number">5</span> );</span><br><span class="line">或</span><br><span class="line">ip_a = (<span class="type">int</span> *)<span class="built_in">calloc</span>( <span class="number">5</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>) );</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="重新调整内存的大小、释放内存"><a href="#重新调整内存的大小、释放内存" class="headerlink" title="重新调整内存的大小、释放内存"></a>重新调整内存的大小、释放内存</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> *<span class="title function_">realloc</span><span class="params">(<span class="type">void</span> *address, <span class="type">int</span> newsize)</span>; 和 	<span class="type">void</span> *<span class="title function_">calloc</span><span class="params">(<span class="type">int</span> num, <span class="type">int</span> size)</span>;</span><br></pre></td></tr></table></figure>
-<p>在不需要该内存时，都应调用函数 <code>free()</code> 来释放。</p>
-<h2 id="示例：动态数组的定义和使用"><a href="#示例：动态数组的定义和使用" class="headerlink" title="示例：动态数组的定义和使用"></a>示例：动态数组的定义和使用</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 定义动态数组指针，动态分配数组空间</span></span><br><span class="line">    <span class="type">int</span> *A, *T;</span><br><span class="line">    <span class="type">int</span> i, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    A = (<span class="type">int</span> *)<span class="built_in">malloc</span>( n * <span class="keyword">sizeof</span>(<span class="type">int</span>) );</span><br><span class="line">    <span class="keyword">if</span> (A == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;存储分配失败！\n&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用指针直接存</span></span><br><span class="line">    T = A;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= n<span class="number">-2</span>; i++) &#123;</span><br><span class="line">        *T = i + <span class="number">1</span>;</span><br><span class="line">        T++;</span><br><span class="line">    &#125;</span><br><span class="line">    *T = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用指针直接取</span></span><br><span class="line">    T = A;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i&lt;= n<span class="number">-1</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *T);</span><br><span class="line">        T++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 动态释放数组空间</span></span><br><span class="line">    <span class="built_in">free</span>(A);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="C-内存管理-1"><a href="#C-内存管理-1" class="headerlink" title="C++ 内存管理"></a>C++ 内存管理</h1><h2 id="new-和-delete-运算符"><a href="#new-和-delete-运算符" class="headerlink" title="new 和 delete 运算符"></a><code>new</code> 和 <code>delete</code> 运算符</h2><p>在 C++ 中，使用 <code>new</code> 运算符为给定类型的变量在运行时分配堆内的内存，这会返回所分配的空间地址。 如果未成功，<code>new</code> 将返回 0 或引发异常。</p>
-<p><code>delete</code> 运算符删除之前由 <code>new</code> 运算符分配的内存。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span>* pvalue  = <span class="literal">NULL</span>; <span class="comment">// 初始化为 null 的指针</span></span><br><span class="line">pvalue  = <span class="keyword">new</span> <span class="type">double</span>;   <span class="comment">// 为变量请求内存</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 处理异常</span></span><br><span class="line"><span class="type">double</span>* pvalue  = <span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">if</span>( !(pvalue  = <span class="keyword">new</span> <span class="type">double</span> ))</span><br><span class="line">&#123;</span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;Error: out of memory.&quot;</span> &lt;&lt;endl;</span><br><span class="line">   <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> pvalue;          <span class="comment">// 释放 pvalue 所指向的内存</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="数组的动态内存分配"><a href="#数组的动态内存分配" class="headerlink" title="数组的动态内存分配"></a>数组的动态内存分配</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span>* pvalue  = <span class="literal">NULL</span>;   <span class="comment">// 初始化为 null 的指针</span></span><br><span class="line">pvalue  = <span class="keyword">new</span> <span class="type">char</span>[<span class="number">20</span>]; <span class="comment">// 为变量请求内存</span></span><br><span class="line"><span class="keyword">delete</span> [] pvalue;       <span class="comment">// 删除 pvalue 所指向的数组</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="示例：分配和释放字符数组"><a href="#示例：分配和释放字符数组" class="headerlink" title="示例：分配和释放字符数组"></a>示例：分配和释放字符数组</h2><p>下面的代码示例分配类 <code>CName</code> 的一个字符数组和一个对象，然后释放它们。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CName</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">enum</span> &#123;</span><br><span class="line">      sizeOfBuffer = <span class="number">256</span></span><br><span class="line">   &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="type">char</span> m_szFirst[sizeOfBuffer];</span><br><span class="line">   <span class="type">char</span> m_szLast[sizeOfBuffer];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="function"><span class="type">void</span> <span class="title">SetName</span><span class="params">(<span class="type">char</span>* pszFirst, <span class="type">char</span>* pszLast)</span> </span>&#123;</span><br><span class="line">     <span class="built_in">strcpy_s</span>(m_szFirst, sizeOfBuffer, pszFirst);</span><br><span class="line">     <span class="built_in">strcpy_s</span>(m_szLast, sizeOfBuffer, pszLast);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="comment">// Allocate memory for the array</span></span><br><span class="line">   <span class="type">char</span>* pCharArray = <span class="keyword">new</span> <span class="type">char</span>[CName::sizeOfBuffer];</span><br><span class="line">   <span class="built_in">strcpy_s</span>(pCharArray, CName::sizeOfBuffer, <span class="string">&quot;Array of characters&quot;</span>);</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Deallocate memory for the array</span></span><br><span class="line">   <span class="keyword">delete</span> [] pCharArray;</span><br><span class="line">   pCharArray = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Allocate memory for the object</span></span><br><span class="line">   CName* pName = <span class="keyword">new</span> CName;</span><br><span class="line">   pName-&gt;<span class="built_in">SetName</span>(<span class="string">&quot;Firstname&quot;</span>, <span class="string">&quot;Lastname&quot;</span>);</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Deallocate memory for the object</span></span><br><span class="line">   <span class="keyword">delete</span> pName;</span><br><span class="line">   pName = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="示例：对使用-new-分配的对象进行初始化"><a href="#示例：对使用-new-分配的对象进行初始化" class="headerlink" title="示例：对使用 new 分配的对象进行初始化"></a>示例：对使用 <code>new</code> 分配的对象进行初始化</h2><p>以下示例说明了如何将初始化表达式与 <code>new</code> 运算符配合使用。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Acct</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// Define default constructor and a constructor that accepts</span></span><br><span class="line">    <span class="comment">//  an initial balance.</span></span><br><span class="line">    <span class="built_in">Acct</span>() &#123;</span><br><span class="line">        balance = <span class="number">0.0</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">Acct</span>( <span class="type">double</span> init_balance ) &#123; </span><br><span class="line">        balance = init_balance; </span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">double</span> balance;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Acct *CheckingAcct = <span class="keyword">new</span> Acct;</span><br><span class="line">    Acct *SavingsAcct = <span class="keyword">new</span> <span class="built_in">Acct</span> ( <span class="number">34.98</span> );</span><br><span class="line">    <span class="type">double</span> *HowMuch = <span class="keyword">new</span> <span class="type">double</span> &#123; <span class="number">43.0</span> &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>编程语言/工具</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LaTeX 代码备忘</title>
-    <url>/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/</url>
-    <content><![CDATA[<h1 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h1><h2 id="括号、矩阵相关"><a href="#括号、矩阵相关" class="headerlink" title="括号、矩阵相关"></a>括号、矩阵相关</h2><ol>
-<li><p>花括号 $\lbrace A \rbrace$</p>
-</li>
-<li><p>大括号<br>注意，在MathJax，“\”需要替换为“\\”。<br> $$<br> m_{ij}&#x3D;\left\lbrace<br> \begin{aligned}<br> 1 &amp; , &amp; \text{if }(a_i, b_j)\in R, \\<br> 0 &amp; , &amp; \text{if }(a_i, b_j)\notin R.<br> \end{aligned}<br> \right.<br> $$</p>
-</li>
-<li><p>矩阵<br> $$<br> \begin{matrix} 0 &amp; 1 \\ 1 &amp; 0 \end{matrix}<br> \quad<br> \begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}<br> \quad<br> \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}<br> \quad<br> \begin{Bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{Bmatrix}<br> \quad<br> \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix}<br> \quad<br> \begin{Vmatrix} i &amp; 0 \\ 0 &amp; -i \end{Vmatrix}<br> $$</p>
-</li>
-</ol>
-<h2 id="微积分"><a href="#微积分" class="headerlink" title="微积分"></a>微积分</h2><ol>
-<li>无穷 $\infty$</li>
-</ol>
-<h2 id="双目运算符"><a href="#双目运算符" class="headerlink" title="双目运算符"></a>双目运算符</h2><ol>
-<li>关系运算符</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$≤$</td>
-<td>\leq</td>
-<td>$≠$</td>
-<td>\neq</td>
-<td>$≈$</td>
-<td>\approx</td>
-<td>$∣$</td>
-<td>\mid</td>
-</tr>
-<tr>
-<td>$≥$</td>
-<td>\geq</td>
-<td>$≐$</td>
-<td>\doteq</td>
-<td>$≅$</td>
-<td>\cong</td>
-<td>$∥$</td>
-<td>\parallel</td>
-</tr>
-<tr>
-<td>$≪$</td>
-<td>\ll</td>
-<td>$∼$</td>
-<td>\sim</td>
-<td>$≡$</td>
-<td>\equiv</td>
-<td>$∝$</td>
-<td>\propto</td>
-</tr>
-<tr>
-<td>$≫$</td>
-<td>\gg</td>
-<td>$≃$</td>
-<td>\simeq</td>
-<td>$⊥$</td>
-<td>\perp</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<ol start="2">
-<li>$a\ \cancel{R} \ a$</li>
-</ol>
-<h2 id="杂七杂八"><a href="#杂七杂八" class="headerlink" title="杂七杂八"></a>杂七杂八</h2><ol>
-<li>花体字母：$\mathbb{R} \quad \mathcal{R} \quad \mathscr{R}$</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程语言/工具</category>
-      </categories>
-      <tags>
-        <tag>LaTeX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>修改日志</title>
-    <url>/2022/11/10/%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/</url>
-    <content><![CDATA[<h1 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h1><h2 id="更改页面透明度"><a href="#更改页面透明度" class="headerlink" title="更改页面透明度"></a>更改页面透明度</h2><p><code>themes\next\source\css\variables\base.styl</code>53行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = white;</span><br><span class="line">$content-bg-color-dark        = $black-dim;</span><br></pre></td></tr></table></figure>
-<p>修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = rgba(255,255,255,0.7);</span><br><span class="line">$content-bg-color-dark        = rgba(60,60,60,0.75);</span><br></pre></td></tr></table></figure>
-<h2 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h2><p><code>themes\next\source\css\variables\Pisces.styl</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = #f5f7f9;</span><br></pre></td></tr></table></figure>
-<p>更改为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$body-bg-color                = rgba(250,210,225,0.2);</span><br></pre></td></tr></table></figure>
-<p>以图片做背景后无效了。</p>
-<h2 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h2><p><code>source\_data\variables.styl</code></p>
-<h1 id="功能增加"><a href="#功能增加" class="headerlink" title="功能增加"></a>功能增加</h1><h2 id="最近文章"><a href="#最近文章" class="headerlink" title="最近文章"></a>最近文章</h2><p><code>themes\next\_config.yml</code>31行之后增加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">recent_posts:</span><br><span class="line"># 块标题</span><br><span class="line">  title: 最近文章</span><br><span class="line"># 图标</span><br><span class="line">  icon: fa fa-history</span><br><span class="line"># 最多多少文章链接</span><br><span class="line">  max_count: 5</span><br></pre></td></tr></table></figure>
-<p><code>source\_data\sidebar.njk</code>，<code>source\_data\styles.styl</code></p>
-]]></content>
   </entry>
   <entry>
     <title>MATLAB 图和网络算法（一）基本函数</title>
     <url>/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p>主要参考MATLAB官方帮助文档：<br><a href="https://ww2.mathworks.cn/help/matlab/graph-and-network-algorithms_zh_CN.html">https://ww2.mathworks.cn/help/matlab/graph-and-network-algorithms_zh_CN.html</a></p>
-<h1 id="创建、查询、修改图"><a href="#创建、查询、修改图" class="headerlink" title="创建、查询、修改图"></a>创建、查询、修改图</h1><p>图的绘图非自带函数，需要 <code>plot(g)</code> ，并在括号中设置 <code>&#39;options&#39;</code> 即可。其中，是否显示每条边的权值，由 <code>&#39;EdgeLabelMode&#39;</code> 设置。</p>
-<h2 id="创建图"><a href="#创建图" class="headerlink" title="创建图"></a>创建图</h2><h3 id="邻接矩阵（关系矩阵）绘图"><a href="#邻接矩阵（关系矩阵）绘图" class="headerlink" title="邻接矩阵（关系矩阵）绘图"></a>邻接矩阵（关系矩阵）绘图</h3><p>使用邻接矩阵通过 <code>graph</code> 或 <code>digraph</code> 函数来创建图。反之，可以使用 <code>adjacency</code> 函数求预先存在的图的加权或未加权的稀疏邻接矩阵。</p>
-<ol>
-<li><p>创建无向图：必须是对称矩阵。</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">g1 = [<span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>;</span><br><span class="line">      <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span>;</span><br><span class="line">      <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>;</span><br><span class="line">      <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>];</span><br><span class="line">G = graph(g1); </span><br></pre></td></tr></table></figure>
-<img src="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/image1.png" class="" title="无向图">
-</li>
-<li><p>创建有向图：可以不是对称矩阵。</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">MR = [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">      <span class="number">0</span> <span class="number">5</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">      <span class="number">2</span> <span class="number">1</span> <span class="number">3</span> <span class="number">0</span>;</span><br><span class="line">      <span class="number">8</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>];</span><br><span class="line">dG = digraph(MR); </span><br></pre></td></tr></table></figure>
-<img src="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/image2.png" class="" title="有向带权图"></li>
+    <content><![CDATA[<p>主要参考MATLAB官方帮助文档：
+https://ww2.mathworks.cn/help/matlab/graph-and-network-algorithms_zh_CN.html</p>
+<h1 id="创建查询修改图">创建、查询、修改图</h1>
+<p>图的绘图非自带函数，需要 <code>plot(g)</code> ，并在括号中设置
+<code>'options'</code> 即可。其中，是否显示每条边的权值，由
+<code>'EdgeLabelMode'</code> 设置。 ## 创建图 ###
+邻接矩阵（关系矩阵）绘图 使用邻接矩阵通过 <code>graph</code> 或
+<code>digraph</code> 函数来创建图。反之，可以使用 <code>adjacency</code>
+函数求预先存在的图的加权或未加权的稀疏邻接矩阵。 1.
+创建无向图：必须是对称矩阵。 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">g1 = [<span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>;</span><br><span class="line">      <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span>;</span><br><span class="line">      <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>;</span><br><span class="line">      <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>];</span><br><span class="line">G = graph(g1); </span><br></pre></td></tr></table></figure> <img src="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/image1.png" class="" title="无向图"></p>
+<ol type="1">
+<li>创建有向图：可以不是对称矩阵。 <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">MR = [<span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">      <span class="number">0</span> <span class="number">5</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">      <span class="number">2</span> <span class="number">1</span> <span class="number">3</span> <span class="number">0</span>;</span><br><span class="line">      <span class="number">8</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>];</span><br><span class="line">dG = digraph(MR); </span><br></pre></td></tr></table></figure> <img src="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/image2.png" class="" title="有向带权图"></li>
 </ol>
-<h3 id="边列表绘图"><a href="#边列表绘图" class="headerlink" title="边列表绘图"></a>边列表绘图</h3><p>对于稀疏矩阵和多重图（邻接矩阵无法表示多重图），列出所有边的边列表是更好的选择。</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">source_nodes = &#123;<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>&#125;;</span><br><span class="line">target_nodes = &#123;<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;C&#x27;</span>&#125;;</span><br><span class="line">edge_weights = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>];</span><br><span class="line">G1 = graph(source_nodes, target_nodes, edge_weights);</span><br><span class="line">G2 = digraph(source_nodes, target_nodes, edge_weights);</span><br></pre></td></tr></table></figure>
-
-<h2 id="图节点ID和高亮"><a href="#图节点ID和高亮" class="headerlink" title="图节点ID和高亮"></a>图节点ID和高亮</h2><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">A = [<span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>; <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>];</span><br><span class="line">G = graph(A, &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>&#125;);</span><br><span class="line">p = shortestpath(G, <span class="number">1</span>, <span class="number">4</span>)                     <span class="comment">% p = 1 3 4</span></span><br><span class="line">p1 = shortestpath(G, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;d&#x27;</span>)                <span class="comment">% p = &#123;&#x27;a&#x27;&#125; &#123;&#x27;c&#x27;&#125; &#123;&#x27;d&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>用数据结构课上 Dijkstra 算法例子里的图小小试一下：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">source_nodes = [<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">3</span>] + <span class="number">1</span>;</span><br><span class="line">target_nodes = [<span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">2</span> <span class="number">4</span> <span class="number">2</span> <span class="number">4</span>] + <span class="number">1</span>;</span><br><span class="line">edge_weights = [<span class="number">10</span> <span class="number">30</span> <span class="number">100</span> <span class="number">50</span> <span class="number">10</span> <span class="number">20</span> <span class="number">60</span>];</span><br><span class="line">G = digraph(source_nodes, target_nodes, edge_weights);</span><br><span class="line">H = plotDigraph(G);</span><br><span class="line">p = shortestpath(G, <span class="number">1</span>, <span class="number">5</span>)                     <span class="comment">% p = 1 4 3 5</span></span><br><span class="line"><span class="comment">% 突出显示最短路径</span></span><br><span class="line">highlight(H, p, <span class="string">&#x27;EdgeColor&#x27;</span>,[<span class="number">255</span> <span class="number">127</span> <span class="number">80</span>]/<span class="number">255</span>,<span class="string">&#x27;LineWidth&#x27;</span>,<span class="number">1.5</span>) </span><br></pre></td></tr></table></figure>
-<img src="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/image5.png" class="" title="最短路径高亮">]]></content>
+<h3 id="边列表绘图">边列表绘图</h3>
+<p>对于稀疏矩阵和多重图（邻接矩阵无法表示多重图），列出所有边的边列表是更好的选择。
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">source_nodes = &#123;<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>&#125;;</span><br><span class="line">target_nodes = &#123;<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;C&#x27;</span>&#125;;</span><br><span class="line">edge_weights = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>];</span><br><span class="line">G1 = graph(source_nodes, target_nodes, edge_weights);</span><br><span class="line">G2 = digraph(source_nodes, target_nodes, edge_weights);</span><br></pre></td></tr></table></figure></p>
+<h2 id="图节点id和高亮">图节点ID和高亮</h2>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">A = [<span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>; <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span>; <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span>];</span><br><span class="line">G = graph(A, &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>&#125;);</span><br><span class="line">p = shortestpath(G, <span class="number">1</span>, <span class="number">4</span>)                     <span class="comment">% p = 1 3 4</span></span><br><span class="line">p1 = shortestpath(G, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;d&#x27;</span>)                <span class="comment">% p = &#123;&#x27;a&#x27;&#125; &#123;&#x27;c&#x27;&#125; &#123;&#x27;d&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+<p>用数据结构课上 Dijkstra 算法例子里的图小小试一下： <figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">source_nodes = [<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">3</span>] + <span class="number">1</span>;</span><br><span class="line">target_nodes = [<span class="number">1</span> <span class="number">3</span> <span class="number">4</span> <span class="number">2</span> <span class="number">4</span> <span class="number">2</span> <span class="number">4</span>] + <span class="number">1</span>;</span><br><span class="line">edge_weights = [<span class="number">10</span> <span class="number">30</span> <span class="number">100</span> <span class="number">50</span> <span class="number">10</span> <span class="number">20</span> <span class="number">60</span>];</span><br><span class="line">G = digraph(source_nodes, target_nodes, edge_weights);</span><br><span class="line">H = plotDigraph(G);</span><br><span class="line">p = shortestpath(G, <span class="number">1</span>, <span class="number">5</span>)                     <span class="comment">% p = 1 4 3 5</span></span><br><span class="line"><span class="comment">% 突出显示最短路径</span></span><br><span class="line">highlight(H, p, <span class="string">&#x27;EdgeColor&#x27;</span>,[<span class="number">255</span> <span class="number">127</span> <span class="number">80</span>]/<span class="number">255</span>,<span class="string">&#x27;LineWidth&#x27;</span>,<span class="number">1.5</span>) </span><br></pre></td></tr></table></figure>
+<img src="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/image5.png" class="" title="最短路径高亮"></p>
+]]></content>
       <categories>
         <category>编程语言/工具</category>
       </categories>
