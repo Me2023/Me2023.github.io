@@ -24,15 +24,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"me2023.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="基础概念 笛卡尔积 (product set&#x2F;Cartesian product)  \(A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace\) ## 划分 (partiton&#x2F;quotient set)">
+    <meta name="description" content="基础概念笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$  划分 (partiton&#x2F;quotient set)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关系和有向图 Relations and Digraphs">
 <meta property="og:url" content="https://me2023.github.io/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/index.html">
 <meta property="og:site_name" content="一隅世界">
-<meta property="og:description" content="基础概念 笛卡尔积 (product set&#x2F;Cartesian product)  \(A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace\) ## 划分 (partiton&#x2F;quotient set)">
+<meta property="og:description" content="基础概念笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$  划分 (partiton&#x2F;quotient set)">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-10T07:05:08.116Z">
-<meta property="article:modified_time" content="2022-11-12T06:43:43.543Z">
+<meta property="article:modified_time" content="2022-11-12T17:10:33.366Z">
 <meta property="article:author" content="来生书">
 <meta property="article:tag" content="离散数学">
 <meta property="article:tag" content="图论算法">
@@ -148,11 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-product-setcartesian-product"><span class="nav-number">1.1.</span> <span class="nav-text">笛卡尔积
-(product set&#x2F;Cartesian product)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB-relation"><span class="nav-number">1.2.</span> <span class="nav-text">关系 (relation)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">关系的特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8F%8D%E6%80%A7-reflexive-and-irreflexive"><span class="nav-number">2.1.</span> <span class="nav-text">自反性 (reflexive and
-irreflexive)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E6%80%A7-symmetric-asymmetric-and-antisymmetric"><span class="nav-number">2.2.</span> <span class="nav-text">对称性
-(symmetric, asymmetric and antisymmetric)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E6%80%A7-transitive"><span class="nav-number">2.3.</span> <span class="nav-text">传递性 (transitive)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB-equivalence-relation"><span class="nav-number">2.4.</span> <span class="nav-text">等价关系 (equivalence
-relation)</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-product-set-x2F-Cartesian-product"><span class="nav-number">1.1.</span> <span class="nav-text">笛卡尔积 (product set&#x2F;Cartesian product)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%92%E5%88%86-partiton-x2F-quotient-set"><span class="nav-number">1.2.</span> <span class="nav-text">划分 (partiton&#x2F;quotient set)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB-relation"><span class="nav-number">1.3.</span> <span class="nav-text">关系 (relation)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%90%91%E5%9B%BE-digraphs-x2F-directed-graph"><span class="nav-number">1.4.</span> <span class="nav-text">有向图 (digraphs&#x2F;directed graph)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84-path"><span class="nav-number">1.5.</span> <span class="nav-text">路径 (path)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">关系的特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8F%8D%E6%80%A7-reflexive-and-irreflexive"><span class="nav-number">2.1.</span> <span class="nav-text">自反性 (reflexive and irreflexive)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E6%80%A7-symmetric-asymmetric-and-antisymmetric"><span class="nav-number">2.2.</span> <span class="nav-text">对称性 (symmetric, asymmetric and antisymmetric)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E6%80%A7-transitive"><span class="nav-number">2.3.</span> <span class="nav-text">传递性 (transitive)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB-equivalence-relation"><span class="nav-number">2.4.</span> <span class="nav-text">等价关系 (equivalence relation)</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -282,7 +278,7 @@ relation)</span></a></li></ol></li></ol></div>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-12 14:43:43" itemprop="dateModified" datetime="2022-11-12T14:43:43+08:00">2022-11-12</time>
+      <time title="修改时间：2022-11-13 01:10:33" itemprop="dateModified" datetime="2022-11-13T01:10:33+08:00">2022-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -319,202 +315,81 @@ relation)</span></a></li></ol></li></ol></div>
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="基础概念">基础概念</h1>
-<h2 id="笛卡尔积-product-setcartesian-product"><strong>笛卡尔积</strong>
-<em>(product set/Cartesian product)</em></h2>
-<ul>
-<li><span class="math inline">\(A \times B = \left\lbrace(a,b)|a\in
-A\  and \  b \in B\right\rbrace\)</span> ## <strong>划分</strong>
-<em>(partiton/quotient set)</em></li>
+        <h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="笛卡尔积-product-set-x2F-Cartesian-product"><a href="#笛卡尔积-product-set-x2F-Cartesian-product" class="headerlink" title="笛卡尔积 (product set&#x2F;Cartesian product)"></a><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em></h2><ul>
+<li>$A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$</li>
 </ul>
-<span id="more"></span>
-<h2 id="关系-relation"><strong>关系</strong> <em>(relation)</em></h2>
-<ul>
-<li>A <strong>relation</strong> <span class="math inline">\(R\)</span>
-from <span class="math inline">\(A\)</span> to <span
-class="math inline">\(B\)</span> is a subset of <span
-class="math inline">\(A\times B\)</span>.</li>
-<li>If <span class="math inline">\(R\subseteq A\times B\)</span> and
-<span class="math inline">\((a,b)\in R\)</span>, we say that <span
-class="math inline">\(a\)</span> <strong>is related to</strong> <span
-class="math inline">\(b\)</span> <strong>by</strong> <span
-class="math inline">\(R\)</span>, and we also write <span
-class="math inline">\(a\ R\ b\)</span>.</li>
-<li><span class="math inline">\(R\subseteq A\times A\)</span> <strong>is
-a relation on</strong> <span class="math inline">\(A\)</span>.</li>
-<li><strong><span class="math inline">\(R\)</span>-relative set
-of</strong> <span class="math inline">\(x\)</span>: <span
-class="math inline">\(R(x) = \lbrace y\in B | x\
-R\  y\rbrace\)</span>.</li>
-<li><strong><span class="math inline">\(R\)</span>-relative set
-of</strong> <span class="math inline">\(A_1\subseteq A\)</span>: <span
-class="math inline">\(R(A_1) = \lbrace y\in B | x\ R\  y\)</span> for
-some <span class="math inline">\(x\)</span> in <span
-class="math inline">\(A_1\)</span><span
-class="math inline">\(\rbrace\)</span>.
-<ul>
-<li><em>Theorem 1:</em>
-<ul>
-<li>If <span class="math inline">\(A_1\subseteq A_2\)</span>, then <span
-class="math inline">\(R(A_1)\subseteq R(A_2)\)</span>.</li>
-<li><span class="math inline">\(R(A_1\cup A_2)= R(A_1)\cup
-R(A_2)\)</span></li>
-<li><span class="math inline">\(R(A_1\cap A_2)\subseteq R(A_1)\cap
-R(A_2)\)</span></li>
-</ul></li>
-<li><em>Theorem 2:</em> Let <span class="math inline">\(R\)</span> and
-<span class="math inline">\(S\)</span> be relations from A to B. If
-<span class="math inline">\(R(a)=S(a)\)</span> for all <span
-class="math inline">\(a\)</span> in <span
-class="math inline">\(A\)</span>, then <span class="math inline">\(R=
-S\)</span>.</li>
-</ul></li>
-<li><strong>关系矩阵</strong> matrix of a relation: <span
-class="math inline">\(A=\lbrace a_1, a_2, ..., a_m\rbrace\)</span> and
-<span class="math inline">\(B=\lbrace a_1, a_2, ..., a_m\rbrace\)</span>
-are finite sets, and <span class="math inline">\(R\)</span> is a
-relation from <span class="math inline">\(A\)</span> to <span
-class="math inline">\(B\)</span>, we represent <span
-class="math inline">\(R\)</span> by the <span
-class="math inline">\(m\times n\)</span> matrix <span
-class="math inline">\(M_R=[m_{ij}]\)</span>, which is defined by <span
-class="math display">\[
-  m_{ij}=\left\lbrace
-  \begin{aligned}
-  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\\\
-  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.
-  \end{aligned}
-  \right.
-  \]</span> The matrix <span class="math inline">\(M_R\)</span> is
-called the <strong>matrix of</strong> <span
-class="math inline">\(R\)</span>. ## <strong>有向图</strong>
-<em>(digraphs/directed graph)</em></li>
-<li>vertices, edge, in-degree, out-degree ## <strong>路径</strong>
-<em>(path)</em></li>
-<li>A path of length n in <span class="math inline">\(R\)</span> from
-<span class="math inline">\(a\)</span> to <span
-class="math inline">\(b\)</span> is a finite sequence <span
-class="math inline">\(\pi:a,x_1x_2,...x_{n-1},b\)</span>, beginning with
-<span class="math inline">\(a\)</span> and ending with <span
-class="math inline">\(b\)</span>, such that <span
-class="math inline">\(a\ R\ x_1,\ x_1\ R\ x_2,\ ...,\ x_{n-1}\ R\
-b\)</span>.</li>
-<li>If <span class="math inline">\(n\)</span> is a fixed positive
-integer, <span class="math inline">\(x\ R^n\ y\)</span> means that there
-is a path of length <span class="math inline">\(n\)</span> from <span
-class="math inline">\(x\)</span> to <span
-class="math inline">\(y\)</span> in <span
-class="math inline">\(R\)</span>.
-<ul>
-<li><span class="math inline">\(R^\infty\)</span> is sometimes called
-the <strong>connectivity relation</strong> for <span
-class="math inline">\(R\)</span>.</li>
-<li><em>Theorem 1:</em> If <span class="math inline">\(R\)</span> is a
-relation on <span class="math inline">\(A=\lbrace
-a_1,a_2,...,a_n\rbrace\)</span>, then <span
-class="math inline">\(M_{R^2}=M_R\odot M_R\)</span>.</li>
-<li><em>Theorem 2:</em> For <span class="math inline">\(n\geq 2\)</span>
-and <span class="math inline">\(R\)</span> a relation on a finite set
-<span class="math inline">\(A\)</span>, we have <span
-class="math display">\[M_{R^n}=M_R\odot M_R\odot ... \odot M_R\quad
-(n\text{ factors}).\]</span></li>
-</ul></li>
+<h2 id="划分-partiton-x2F-quotient-set"><a href="#划分-partiton-x2F-quotient-set" class="headerlink" title="划分 (partiton&#x2F;quotient set)"></a><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></h2><span id="more"></span>
+
+<h2 id="关系-relation"><a href="#关系-relation" class="headerlink" title="关系 (relation)"></a><strong>关系</strong> <em>(relation)</em></h2><ul>
+<li>A <strong>relation</strong> $R$ from $A$ to $B$ is a subset of $A\times B$. </li>
+<li>If $R\subseteq A\times B$ and $(a,b)\in R$, we say that $a$ <strong>is related to</strong> $b$ <strong>by</strong> $R$, and we also write $a\ R\ b$.</li>
+<li>$R\subseteq A\times A$ <strong>is a relation on</strong> $A$.</li>
+<li><strong>$R$-relative set of</strong> $x$: $R(x) &#x3D; \lbrace y\in B | x\ R\  y\rbrace$.</li>
+<li><strong>$R$-relative set of</strong> $A_1\subseteq A$: $R(A_1) &#x3D; \lbrace y\in B | x\ R\  y$ for some $x$ in $A_1$$\rbrace$.<ul>
+<li><em>Theorem 1:</em><ul>
+<li>If $A_1\subseteq A_2$, then $R(A_1)\subseteq R(A_2)$.</li>
+<li>$R(A_1\cup A_2)&#x3D; R(A_1)\cup R(A_2)$</li>
+<li>$R(A_1\cap A_2)\subseteq R(A_1)\cap R(A_2)$</li>
 </ul>
-<h1 id="关系的特性">关系的特性</h1>
-<h2 id="自反性-reflexive-and-irreflexive">自反性 <em>(reflexive and
-irreflexive)</em></h2>
-<ul>
-<li>A relation <span class="math inline">\(R\)</span> on a set <span
-class="math inline">\(A\)</span> is <strong>reflexive</strong> if <span
-class="math inline">\((a,a)\in R\)</span> for all <span
-class="math inline">\(a\in A\)</span>, that is, if <span
-class="math inline">\(a\ R\ a\)</span> for all <span
-class="math inline">\(a \in A\)</span>.
-<ul>
+</li>
+<li><em>Theorem 2:</em> Let $R$ and $S$ be relations from A to B. If $R(a)&#x3D;S(a)$ for all $a$ in $A$, then $R&#x3D; S$.</li>
+</ul>
+</li>
+<li><strong>关系矩阵</strong> matrix of a relation: $A&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ and $B&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ are finite sets, and $R$ is a relation from $A$ to $B$, we represent $R$ by the $m\times n$ matrix $M_R&#x3D;[m_{ij}]$, which is defined by<br>  $$<br>  m_{ij}&#x3D;\left\lbrace<br>  \begin{aligned}<br>  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\<br>  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.<br>  \end{aligned}<br>  \right.<br>  $$<br>  The matrix $M_R$ is called the <strong>matrix of</strong> $R$.</li>
+</ul>
+<h2 id="有向图-digraphs-x2F-directed-graph"><a href="#有向图-digraphs-x2F-directed-graph" class="headerlink" title="有向图 (digraphs&#x2F;directed graph)"></a><strong>有向图</strong> <em>(digraphs&#x2F;directed graph)</em></h2><ul>
+<li>vertices, edge, in-degree, out-degree</li>
+</ul>
+<h2 id="路径-path"><a href="#路径-path" class="headerlink" title="路径 (path)"></a><strong>路径</strong> <em>(path)</em></h2><ul>
+<li>A path of length n in $R$ from $a$ to $b$ is a finite sequence $\pi:a,x_1x_2,…x_{n-1},b$, beginning with $a$ and ending with $b$, such that $a\ R\ x_1,\ x_1\ R\ x_2,\ …,\ x_{n-1}\ R\ b$.</li>
+<li>If $n$ is a fixed positive integer, $x\ R^n\ y$ means that there is a path of length $n$ from $x$ to $y$ in $R$.<ul>
+<li>$R^\infty$ is sometimes called the <strong>connectivity relation</strong> for $R$.</li>
+<li><em>Theorem 1:</em> If $R$ is a relation on $A&#x3D;\lbrace a_1,a_2,…,a_n\rbrace$, then $M_{R^2}&#x3D;M_R\odot M_R$.</li>
+<li><em>Theorem 2:</em> For $n\geq 2$ and $R$ a relation on a finite set $A$, we have $$M_{R^n}&#x3D;M_R\odot M_R\odot … \odot M_R\quad (n\text{ factors}).$$</li>
+</ul>
+</li>
+</ul>
+<h1 id="关系的特性"><a href="#关系的特性" class="headerlink" title="关系的特性"></a>关系的特性</h1><h2 id="自反性-reflexive-and-irreflexive"><a href="#自反性-reflexive-and-irreflexive" class="headerlink" title="自反性 (reflexive and irreflexive)"></a>自反性 <em>(reflexive and irreflexive)</em></h2><ul>
+<li>A relation $R$ on a set $A$ is <strong>reflexive</strong> if $(a,a)\in R$ for all $a\in A$, that is, if $a\ R\ a$ for all $a \in A$.<ul>
 <li>关系矩阵对角线上所有元素值都为1。</li>
-</ul></li>
-<li>A relation <span class="math inline">\(R\)</span> on a set <span
-class="math inline">\(A\)</span> is <strong>irreflexive</strong> if
-<span class="math inline">\(a\ \cancel{R} \ a\)</span> for all <span
-class="math inline">\(a \in A\)</span>.
-<ul>
+</ul>
+</li>
+<li>A relation $R$ on a set $A$ is <strong>irreflexive</strong> if $a\ \cancel{R} \ a$ for all $a \in A$.<ul>
 <li>关系矩阵对角线上所有元素值都为0。</li>
-</ul></li>
 </ul>
-<h2 id="对称性-symmetric-asymmetric-and-antisymmetric">对称性
-<em>(symmetric, asymmetric and antisymmetric)</em></h2>
-<ul>
-<li>对称 A relation <span class="math inline">\(R\)</span> on a set
-<span class="math inline">\(A\)</span> is <strong>symmetric</strong> if
-whenever <span class="math inline">\(a\ R \ b\)</span>, then <span
-class="math inline">\(b\ R\ a\)</span>.
-<ul>
+</li>
+</ul>
+<h2 id="对称性-symmetric-asymmetric-and-antisymmetric"><a href="#对称性-symmetric-asymmetric-and-antisymmetric" class="headerlink" title="对称性 (symmetric, asymmetric and antisymmetric)"></a>对称性 <em>(symmetric, asymmetric and antisymmetric)</em></h2><ul>
+<li>对称 A relation $R$ on a set $A$ is <strong>symmetric</strong> if whenever $a\ R \ b$, then $b\ R\ a$.<ul>
 <li>关系矩阵是对称矩阵。</li>
-</ul></li>
-<li>非对称 A relation <span class="math inline">\(R\)</span> on a set
-<span class="math inline">\(A\)</span> is <strong>asymmetric</strong> if
-whenever <span class="math inline">\(a\ R \ b\)</span>, then <span
-class="math inline">\(b\ \cancel{R}\ a\)</span>.
-<ul>
+</ul>
+</li>
+<li>非对称 A relation $R$ on a set $A$ is <strong>asymmetric</strong> if whenever $a\ R \ b$, then $b\ \cancel{R}\ a$.<ul>
 <li>关系矩阵对角线全为0；关于对角线对称的元素值不能全为1。</li>
-</ul></li>
-<li>反对称 A relation <span class="math inline">\(R\)</span> on a set
-<span class="math inline">\(A\)</span> is <strong>antisymmetric</strong>
-if whenever <span class="math inline">\(a\ R \ b\)</span> and <span
-class="math inline">\(b\ R \ a\)</span>, then <span
-class="math inline">\(a=b\)</span>.
-<ul>
+</ul>
+</li>
+<li>反对称 A relation $R$ on a set $A$ is <strong>antisymmetric</strong> if whenever $a\ R \ b$ and $b\ R \ a$, then $a&#x3D;b$. <ul>
 <li>关系矩阵对角线不限制；除对角线外，关于对角线对称的元素值不能全为1。</li>
-</ul></li>
 </ul>
-<h2 id="传递性-transitive">传递性 <em>(transitive)</em></h2>
-<ul>
-<li>A relation <span class="math inline">\(R\)</span> on a set <span
-class="math inline">\(A\)</span> is <strong>transitive</strong> if
-whenever <span class="math inline">\(a\ R \ b\)</span> and <span
-class="math inline">\(b\ R \ c\)</span>, then <span
-class="math inline">\(a\ R\ c\)</span>.
-<ul>
-<li><em>Theorem 1:</em> A relation <span
-class="math inline">\(R\)</span> is transitive iff <span
-class="math inline">\(R^n\subseteq R\)</span> for all <span
-class="math inline">\(n\geq 1\)</span>.</li>
-<li><em>Theorem 2:</em> in terms of <span
-class="math inline">\(R\)</span>-relative sets
-<ul>
-<li>Reflexivity of <span class="math inline">\(R\)</span> means that
-<span class="math inline">\(a\in R(a)\)</span> for all <span
-class="math inline">\(a\)</span> in <span
-class="math inline">\(A\)</span>.</li>
-<li>Symmetry of <span class="math inline">\(R\)</span> means that <span
-class="math inline">\(a\in R(b)\)</span> iff <span
-class="math inline">\(b\in R(a)\)</span>.</li>
-<li>Transitivity of <span class="math inline">\(R\)</span> means that if
-<span class="math inline">\(b\in R(a)\)</span> and <span
-class="math inline">\(c\in R(b)\)</span>, then <span
-class="math inline">\(c\in R(a)\)</span>.</li>
-</ul></li>
-</ul></li>
+</li>
 </ul>
-<h2 id="等价关系-equivalence-relation">等价关系 <em>(equivalence
-relation)</em></h2>
-<ul>
-<li>A relation <span class="math inline">\(R\)</span> on a set <span
-class="math inline">\(A\)</span> is called an <strong>equivalence
-relation</strong> if it is reflexive, symmetric, and transitive.
-<ul>
-<li><em>Theorem 1:</em> Let <span
-class="math inline">\(\mathcal{P}\)</span> be a partition of a set <span
-class="math inline">\(A\)</span> (Sets in <span
-class="math inline">\(\mathcal{P}\)</span> are called the blocks of
-<span class="math inline">\(\mathcal{P}\)</span>). Define the relation
-<span class="math inline">\(R\)</span> on <span
-class="math inline">\(A\)</span> as follows: <span
-class="math display">\[
-a\ R\ b\qquad \text{iff $a$ and $b$ are members of the same block.}
-\]</span> Then <span class="math inline">\(R\)</span> is an equivalence
-relation on <span class="math inline">\(A\)</span>.</li>
-</ul></li>
+<h2 id="传递性-transitive"><a href="#传递性-transitive" class="headerlink" title="传递性 (transitive)"></a>传递性 <em>(transitive)</em></h2><ul>
+<li>A relation $R$ on a set $A$ is <strong>transitive</strong> if whenever $a\ R \ b$ and $b\ R \ c$, then $a\ R\ c$.<ul>
+<li><em>Theorem 1:</em> A relation $R$ is transitive iff $R^n\subseteq R$ for all $n\geq 1$.</li>
+<li><em>Theorem 2:</em> in terms of $R$-relative sets<ul>
+<li>Reflexivity of $R$ means that $a\in R(a)$ for all $a$ in $A$.</li>
+<li>Symmetry of $R$ means that $a\in R(b)$ iff $b\in R(a)$.</li>
+<li>Transitivity of $R$ means that if $b\in R(a)$ and $c\in R(b)$, then $c\in R(a)$.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="等价关系-equivalence-relation"><a href="#等价关系-equivalence-relation" class="headerlink" title="等价关系 (equivalence relation)"></a>等价关系 <em>(equivalence relation)</em></h2><ul>
+<li>A relation $R$ on a set $A$ is called an <strong>equivalence relation</strong> if it is reflexive, symmetric, and transitive.<ul>
+<li><em>Theorem 1:</em> Let $\mathcal{P}$ be a partition of a set $A$ (Sets in $\mathcal{P}$ are called the blocks of $\mathcal{P}$). Define the relation $R$ on $A$ as follows:<br>$$<br>a\ R\ b\qquad \text{iff $a$ and $b$ are members of the same block.}<br>$$<br>Then $R$ is an equivalence relation on $A$.</li>
+</ul>
+</li>
 </ul>
 
     </div>
