@@ -30,7 +30,7 @@
 <meta property="og:site_name" content="一隅世界">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-12T08:41:37.000Z">
-<meta property="article:modified_time" content="2022-11-13T09:35:02.019Z">
+<meta property="article:modified_time" content="2022-11-13T11:10:45.491Z">
 <meta property="article:author" content="来生书">
 <meta property="article:tag" content="图论算法">
 <meta property="article:tag" content="C&#x2F;C++">
@@ -96,7 +96,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -162,7 +162,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -173,7 +173,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -192,6 +192,9 @@
       最近文章
     </div>
     <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/2022/11/13/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/" title="2022&#x2F;11&#x2F;13&#x2F;面向对象：基础部分&#x2F;">C++ 面向对象概览</a>
+        </li>
         <li class="links-of-recent-posts-item">
           <a href="/2022/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E6%B4%BB%E5%8A%A8%E7%BD%91%E7%BB%9C/" title="2022&#x2F;11&#x2F;13&#x2F;数据结构：活动网络&#x2F;">数据结构：活动网络</a>
         </li>
@@ -277,7 +280,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-13 17:35:02" itemprop="dateModified" datetime="2022-11-13T17:35:02+08:00">2022-11-13</time>
+      <time title="修改时间：2022-11-13 19:10:45" itemprop="dateModified" datetime="2022-11-13T19:10:45+08:00">2022-11-13</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -315,7 +318,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="用到的图的类定义（邻接矩阵存储）"><a href="#用到的图的类定义（邻接矩阵存储）" class="headerlink" title="用到的图的类定义（邻接矩阵存储）"></a>用到的图的类定义（邻接矩阵存储）</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> numVertices, numEdges;</span><br><span class="line">    <span class="type">char</span> VerticesList[maxVertices];</span><br><span class="line">    <span class="type">int</span> Edge[maxVertices][maxVertices];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getVertexPos</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;         <span class="comment">// 从顶点数据值找出顶点号</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">firstNeighbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;        <span class="comment">// 给出顶点 v 的第一个邻接顶点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">nexNeightbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;  <span class="comment">// 给出顶点 v 某邻接顶点 w 的下一个邻接顶点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfVertices</span><span class="params">(MGraph&amp; G)</span></span>; </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfEdges</span><span class="params">(MGraph&amp; G)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">char</span> <span class="title">getValue</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getWeight</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h1 id="用到的图的类定义（邻接矩阵存储）"><a href="#用到的图的类定义（邻接矩阵存储）" class="headerlink" title="用到的图的类定义（邻接矩阵存储）"></a>用到的图的类定义（邻接矩阵存储）</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MGraph</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">int</span> numVertices, numEdges;</span><br><span class="line">    <span class="type">char</span> VerticesList[maxVertices];</span><br><span class="line">    <span class="type">int</span> Edge[maxVertices][maxVertices];</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getVertexPos</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;         <span class="comment">// 从顶点数据值找出顶点号</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">firstNeighbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;        <span class="comment">// 给出顶点 v 的第一个邻接顶点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">nextNeightbor</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;  <span class="comment">// 给出顶点 v 某邻接顶点 w 的下一个邻接顶点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfVertices</span><span class="params">(MGraph&amp; G)</span></span>; </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfEdges</span><span class="params">(MGraph&amp; G)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">char</span> <span class="title">getValue</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v)</span></span>;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getWeight</span><span class="params">(MGraph&amp; G, <span class="type">int</span> v, <span class="type">int</span> w)</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -371,7 +374,6 @@
 <li>$k$ 表示<strong>运算步骤</strong>。</li>
 </ul>
 </li>
-<li></li>
 </ul>
 <h2 id="代码实现：Floyd-算法"><a href="#代码实现：Floyd-算法" class="headerlink" title="代码实现：Floyd 算法"></a>代码实现：Floyd 算法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Floyd</span><span class="params">(MGraph&amp; G, <span class="type">int</span> a[][maxVertices], <span class="type">int</span> path[][maxVertices])</span> </span>&#123;</span><br><span class="line"><span class="comment">// a[i][j] 是顶点 i 和 j 之间的最短路径长度，path[i][j] 是相应路径上顶点 j 的前一顶点的顶点号</span></span><br><span class="line"><span class="comment">// 算法计算每一对顶点间最短路径及最短路径长度</span></span><br><span class="line">    <span class="type">int</span> i, j, k, n = G.numVertices;</span><br><span class="line">    <span class="comment">// 矩阵 a 和 path 的初始化</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        a[i][j] = G.Edge[i][j];</span><br><span class="line">        <span class="keyword">if</span> (i == j) &#123;</span><br><span class="line">            path[i][j] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (a[i][j] &lt; maxWeight) &#123;</span><br><span class="line">            path[i][j] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> path[i][j] = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 逐步加入 vk 作为中间顶点</span></span><br><span class="line">    <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">        <span class="comment">// 对每条路径（矩阵上每一元素）进行松弛</span></span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[i][k] + a[k][j] &lt; a[i][j]) &#123;</span><br><span class="line">                    a[i][j] = a[i][k] + a[k][j];</span><br><span class="line">                    path[i][j] = path[k][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -437,14 +439,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">6k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">18 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
   </span>
 </div>
 
