@@ -24,29 +24,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"me2023.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="基础概念笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$  划分 (partiton&#x2F;quotient set)">
+    <meta name="description" content="定义你可以在全局或为各个类重新定义大多数内置运算符的函数。 重载运算符作为函数来实现。重载运算符的名称是 operatorX。 例如，若要重载加法运算符，需要定义一个名为“operator+”的函数。 同样地，若要重载加法&#x2F;赋值运算符 +&#x3D;，需要定义一个名为“operator+&#x3D;”的函数。 调用尽管通常是在代码中遇到重载运算符时由编译器对其进行隐式调用，但也可以按照与">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关系和有向图 Relations and Digraphs">
-<meta property="og:url" content="https://me2023.github.io/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/index.html">
+<meta property="og:title" content="C++ 面向对象：运算符重载">
+<meta property="og:url" content="https://me2023.github.io/2022/11/15/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/index.html">
 <meta property="og:site_name" content="一隅世界">
-<meta property="og:description" content="基础概念笛卡尔积 (product set&#x2F;Cartesian product) $A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$  划分 (partiton&#x2F;quotient set)">
+<meta property="og:description" content="定义你可以在全局或为各个类重新定义大多数内置运算符的函数。 重载运算符作为函数来实现。重载运算符的名称是 operatorX。 例如，若要重载加法运算符，需要定义一个名为“operator+”的函数。 同样地，若要重载加法&#x2F;赋值运算符 +&#x3D;，需要定义一个名为“operator+&#x3D;”的函数。 调用尽管通常是在代码中遇到重载运算符时由编译器对其进行隐式调用，但也可以按照与">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-10T07:05:08.116Z">
-<meta property="article:modified_time" content="2022-11-12T17:10:33.366Z">
+<meta property="article:published_time" content="2022-11-15T06:15:12.000Z">
+<meta property="article:modified_time" content="2022-11-15T06:31:16.047Z">
 <meta property="article:author" content="来生书">
-<meta property="article:tag" content="离散数学">
-<meta property="article:tag" content="图论算法">
+<meta property="article:tag" content="C&#x2F;C++">
+<meta property="article:tag" content="面向对象程序设计">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://me2023.github.io/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/">
+<link rel="canonical" href="https://me2023.github.io/2022/11/15/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://me2023.github.io/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/","path":"2022/11/10/关系和有向图/","title":"关系和有向图 Relations and Digraphs"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://me2023.github.io/2022/11/15/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/","path":"2022/11/15/C-面向对象：运算符重载/","title":"C++ 面向对象：运算符重载"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>关系和有向图 Relations and Digraphs | 一隅世界</title>
+<title>C++ 面向对象：运算符重载 | 一隅世界</title>
   
 
 
@@ -148,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-product-set-x2F-Cartesian-product"><span class="nav-number">1.1.</span> <span class="nav-text">笛卡尔积 (product set&#x2F;Cartesian product)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%92%E5%88%86-partiton-x2F-quotient-set"><span class="nav-number">1.2.</span> <span class="nav-text">划分 (partiton&#x2F;quotient set)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB-relation"><span class="nav-number">1.3.</span> <span class="nav-text">关系 (relation)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%90%91%E5%9B%BE-digraphs-x2F-directed-graph"><span class="nav-number">1.4.</span> <span class="nav-text">有向图 (digraphs&#x2F;directed graph)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84-path"><span class="nav-number">1.5.</span> <span class="nav-text">路径 (path)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">关系的特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8F%8D%E6%80%A7-reflexive-and-irreflexive"><span class="nav-number">2.1.</span> <span class="nav-text">自反性 (reflexive and irreflexive)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E6%80%A7-symmetric-asymmetric-and-antisymmetric"><span class="nav-number">2.2.</span> <span class="nav-text">对称性 (symmetric, asymmetric and antisymmetric)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E6%80%A7-transitive"><span class="nav-number">2.3.</span> <span class="nav-text">传递性 (transitive)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB-equivalence-relation"><span class="nav-number">2.4.</span> <span class="nav-text">等价关系 (equivalence relation)</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%83%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">调用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B-Complex"><span class="nav-number">3.</span> <span class="nav-text">示例 Complex</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -248,7 +248,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://me2023.github.io/2022/11/10/%E5%85%B3%E7%B3%BB%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE/">
+    <link itemprop="mainEntityOfPage" href="https://me2023.github.io/2022/11/15/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/touxiang.jpg">
@@ -261,12 +261,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="关系和有向图 Relations and Digraphs | 一隅世界">
+      <meta itemprop="name" content="C++ 面向对象：运算符重载 | 一隅世界">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          关系和有向图 Relations and Digraphs
+          C++ 面向对象：运算符重载
         </h1>
 
         <div class="post-meta-container">
@@ -276,15 +276,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-11-10 15:05:08" itemprop="dateCreated datePublished" datetime="2022-11-10T15:05:08+08:00">2022-11-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-13 01:10:33" itemprop="dateModified" datetime="2022-11-13T01:10:33+08:00">2022-11-13</time>
+      <time title="创建时间：2022-11-15 14:15:12 / 修改时间：14:31:16" itemprop="dateCreated datePublished" datetime="2022-11-15T14:15:12+08:00">2022-11-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -292,7 +286,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/CS-%E7%9B%B8%E5%85%B3%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">CS 相关数理基础</span></a>
+          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">编程语言/工具</span></a>
         </span>
     </span>
 
@@ -303,14 +297,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>815</span>
+      <span>265</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -321,116 +315,35 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="笛卡尔积-product-set-x2F-Cartesian-product"><a href="#笛卡尔积-product-set-x2F-Cartesian-product" class="headerlink" title="笛卡尔积 (product set&#x2F;Cartesian product)"></a><strong>笛卡尔积</strong> <em>(product set&#x2F;Cartesian product)</em></h2><ul>
-<li>$A \times B &#x3D; \left\lbrace(a,b)|a\in A\  and \  b \in B\right\rbrace$</li>
-</ul>
-<h2 id="划分-partiton-x2F-quotient-set"><a href="#划分-partiton-x2F-quotient-set" class="headerlink" title="划分 (partiton&#x2F;quotient set)"></a><strong>划分</strong> <em>(partiton&#x2F;quotient set)</em></h2><span id="more"></span>
+        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>你可以在全局或为各个类重新定义大多数内置运算符的函数。 重载运算符作为函数来实现。重载运算符的名称是 <code>operatorX</code>。 例如，若要重载加法运算符，需要定义一个名为“operator+”的函数。 同样地，若要重载加法&#x2F;赋值运算符 +&#x3D;，需要定义一个名为“operator+&#x3D;”的函数。</p>
+<h1 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h1><p>尽管通常是在代码中遇到重载运算符时由编译器对其进行隐式调用，但也可以按照与调用任何成员或非成员函数相同的方式来显式调用重载运算符：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Point pt;</span><br><span class="line">pt.<span class="keyword">operator</span>+( <span class="number">3</span> );  <span class="comment">// Call addition operator to add 3 to pt.</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="关系-relation"><a href="#关系-relation" class="headerlink" title="关系 (relation)"></a><strong>关系</strong> <em>(relation)</em></h2><ul>
-<li>A <strong>relation</strong> $R$ from $A$ to $B$ is a subset of $A\times B$. </li>
-<li>If $R\subseteq A\times B$ and $(a,b)\in R$, we say that $a$ <strong>is related to</strong> $b$ <strong>by</strong> $R$, and we also write $a\ R\ b$.</li>
-<li>$R\subseteq A\times A$ <strong>is a relation on</strong> $A$.</li>
-<li><strong>$R$-relative set of</strong> $x$: $R(x) &#x3D; \lbrace y\in B | x\ R\  y\rbrace$.</li>
-<li><strong>$R$-relative set of</strong> $A_1\subseteq A$: $R(A_1) &#x3D; \lbrace y\in B | x\ R\  y$ for some $x$ in $A_1$$\rbrace$.<ul>
-<li><em>Theorem 1:</em><ul>
-<li>If $A_1\subseteq A_2$, then $R(A_1)\subseteq R(A_2)$.</li>
-<li>$R(A_1\cup A_2)&#x3D; R(A_1)\cup R(A_2)$</li>
-<li>$R(A_1\cap A_2)\subseteq R(A_1)\cap R(A_2)$</li>
-</ul>
-</li>
-<li><em>Theorem 2:</em> Let $R$ and $S$ be relations from A to B. If $R(a)&#x3D;S(a)$ for all $a$ in $A$, then $R&#x3D; S$.</li>
-</ul>
-</li>
-<li><strong>关系矩阵</strong> matrix of a relation: $A&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ and $B&#x3D;\lbrace a_1, a_2, …, a_m\rbrace$ are finite sets, and $R$ is a relation from $A$ to $B$, we represent $R$ by the $m\times n$ matrix $M_R&#x3D;[m_{ij}]$, which is defined by<br>  $$<br>  m_{ij}&#x3D;\left\lbrace<br>  \begin{aligned}<br>  1 &amp;  &amp; \text{if }(a_i, b_j)\in R, \\<br>  0 &amp;  &amp; \text{if }(a_i, b_j)\notin R.<br>  \end{aligned}<br>  \right.<br>  $$<br>  The matrix $M_R$ is called the <strong>matrix of</strong> $R$.</li>
-</ul>
-<h2 id="有向图-digraphs-x2F-directed-graph"><a href="#有向图-digraphs-x2F-directed-graph" class="headerlink" title="有向图 (digraphs&#x2F;directed graph)"></a><strong>有向图</strong> <em>(digraphs&#x2F;directed graph)</em></h2><ul>
-<li>vertices, edge, in-degree, out-degree</li>
-</ul>
-<h2 id="路径-path"><a href="#路径-path" class="headerlink" title="路径 (path)"></a><strong>路径</strong> <em>(path)</em></h2><ul>
-<li>A path of length n in $R$ from $a$ to $b$ is a finite sequence $\pi:a,x_1x_2,…x_{n-1},b$, beginning with $a$ and ending with $b$, such that $a\ R\ x_1,\ x_1\ R\ x_2,\ …,\ x_{n-1}\ R\ b$.</li>
-<li>If $n$ is a fixed positive integer, $x\ R^n\ y$ means that there is a path of length $n$ from $x$ to $y$ in $R$.<ul>
-<li>$R^\infty$ is sometimes called the <strong>connectivity relation</strong> for $R$.</li>
-<li><em>Theorem 1:</em> If $R$ is a relation on $A&#x3D;\lbrace a_1,a_2,…,a_n\rbrace$, then $M_{R^2}&#x3D;M_R\odot M_R$.</li>
-<li><em>Theorem 2:</em> For $n\geq 2$ and $R$ a relation on a finite set $A$, we have $$M_{R^n}&#x3D;M_R\odot M_R\odot … \odot M_R\quad (n\text{ factors}).$$</li>
-</ul>
-</li>
-</ul>
-<h1 id="关系的特性"><a href="#关系的特性" class="headerlink" title="关系的特性"></a>关系的特性</h1><h2 id="自反性-reflexive-and-irreflexive"><a href="#自反性-reflexive-and-irreflexive" class="headerlink" title="自反性 (reflexive and irreflexive)"></a>自反性 <em>(reflexive and irreflexive)</em></h2><ul>
-<li>A relation $R$ on a set $A$ is <strong>reflexive</strong> if $(a,a)\in R$ for all $a\in A$, that is, if $a\ R\ a$ for all $a \in A$.<ul>
-<li>关系矩阵对角线上所有元素值都为1。</li>
-</ul>
-</li>
-<li>A relation $R$ on a set $A$ is <strong>irreflexive</strong> if $a\ \cancel{R} \ a$ for all $a \in A$.<ul>
-<li>关系矩阵对角线上所有元素值都为0。</li>
-</ul>
-</li>
-</ul>
-<h2 id="对称性-symmetric-asymmetric-and-antisymmetric"><a href="#对称性-symmetric-asymmetric-and-antisymmetric" class="headerlink" title="对称性 (symmetric, asymmetric and antisymmetric)"></a>对称性 <em>(symmetric, asymmetric and antisymmetric)</em></h2><ul>
-<li>对称 A relation $R$ on a set $A$ is <strong>symmetric</strong> if whenever $a\ R \ b$, then $b\ R\ a$.<ul>
-<li>关系矩阵是对称矩阵。</li>
-</ul>
-</li>
-<li>非对称 A relation $R$ on a set $A$ is <strong>asymmetric</strong> if whenever $a\ R \ b$, then $b\ \cancel{R}\ a$.<ul>
-<li>关系矩阵对角线全为0；关于对角线对称的元素值不能全为1。</li>
-</ul>
-</li>
-<li>反对称 A relation $R$ on a set $A$ is <strong>antisymmetric</strong> if whenever $a\ R \ b$ and $b\ R \ a$, then $a&#x3D;b$. <ul>
-<li>关系矩阵对角线不限制；除对角线外，关于对角线对称的元素值不能全为1。</li>
-</ul>
-</li>
-</ul>
-<h2 id="传递性-transitive"><a href="#传递性-transitive" class="headerlink" title="传递性 (transitive)"></a>传递性 <em>(transitive)</em></h2><ul>
-<li>A relation $R$ on a set $A$ is <strong>transitive</strong> if whenever $a\ R \ b$ and $b\ R \ c$, then $a\ R\ c$.<ul>
-<li><em>Theorem 1:</em> A relation $R$ is transitive iff $R^n\subseteq R$ for all $n\geq 1$.</li>
-<li><em>Theorem 2:</em> in terms of $R$-relative sets<ul>
-<li>Reflexivity of $R$ means that $a\in R(a)$ for all $a$ in $A$.</li>
-<li>Symmetry of $R$ means that $a\in R(b)$ iff $b\in R(a)$.</li>
-<li>Transitivity of $R$ means that if $b\in R(a)$ and $c\in R(b)$, then $c\in R(a)$.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="等价关系-equivalence-relation"><a href="#等价关系-equivalence-relation" class="headerlink" title="等价关系 (equivalence relation)"></a>等价关系 <em>(equivalence relation)</em></h2><ul>
-<li>A relation $R$ on a set $A$ is called an <strong>equivalence relation</strong> if it is reflexive, symmetric, and transitive.<ul>
-<li><em>Theorem 1:</em> Let $\mathcal{P}$ be a partition of a set $A$ (Sets in $\mathcal{P}$ are called the blocks of $\mathcal{P}$). Define the relation $R$ on $A$ as follows:<br>$$<br>a\ R\ b\qquad \text{iff $a$ and $b$ are members of the same block.}<br>$$<br>Then $R$ is an equivalence relation on $A$.</li>
-</ul>
-</li>
-</ul>
-
+<h1 id="示例-Complex"><a href="#示例-Complex" class="headerlink" title="示例 Complex"></a>示例 <code>Complex</code></h1><p>以下示例重载 + 运算符，将两个复数相加并返回结果。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Complex</span> &#123;</span><br><span class="line">   <span class="built_in">Complex</span>( <span class="type">double</span> r, <span class="type">double</span> i ) : <span class="built_in">re</span>(r), <span class="built_in">im</span>(i) &#123;&#125;</span><br><span class="line">   Complex <span class="keyword">operator</span>+( Complex &amp;other );</span><br><span class="line">   <span class="function"><span class="type">void</span> <span class="title">Display</span><span class="params">( )</span> </span>&#123;   cout &lt;&lt; re &lt;&lt; <span class="string">&quot;, &quot;</span> &lt;&lt; im &lt;&lt; endl; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">   <span class="type">double</span> re, im;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Operator overloaded using a member function</span></span><br><span class="line">Complex Complex::<span class="keyword">operator</span>+( Complex &amp;other ) &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="built_in">Complex</span>( re + other.re, im + other.im );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   Complex a = <span class="built_in">Complex</span>( <span class="number">1.2</span>, <span class="number">3.4</span> );</span><br><span class="line">   Complex b = <span class="built_in">Complex</span>( <span class="number">5.6</span>, <span class="number">7.8</span> );</span><br><span class="line">   Complex c = <span class="built_in">Complex</span>( <span class="number">0.0</span>, <span class="number">0.0</span> );</span><br><span class="line"></span><br><span class="line">   c = a + b;</span><br><span class="line">   c.<span class="built_in">Display</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-        <div class="popular-posts-date">2022-11-09</div>
-      <div class="popular-posts-title"><a href="/2022/11/09/LaTeX%E4%BB%A3%E7%A0%81%E5%A4%87%E5%BF%98/" rel="bookmark">LaTeX 代码备忘</a></div>
-    </li>
-  </ul>
 
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 离散数学</a>
-              <a href="/tags/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 图论算法</a>
+              <a href="/tags/C-C/" rel="tag"><i class="fa fa-tag"></i> C/C++</a>
+              <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="tag"><i class="fa fa-tag"></i> 面向对象程序设计</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/11/10/%E4%BF%AE%E6%94%B9%E6%97%A5%E5%BF%97/" rel="prev" title="修改日志">
-                  <i class="fa fa-chevron-left"></i> 修改日志
+                <a href="/2022/11/15/C-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B0%9D%E8%AF%95%EF%BC%9A%E5%9B%BE%E7%9A%84%E7%B1%BB%E5%AE%9A%E4%B9%89/" rel="prev" title="C++ 面向对象的尝试：图的类定义">
+                  <i class="fa fa-chevron-left"></i> C++ 面向对象的尝试：图的类定义
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/11/11/%E5%9B%BE%E5%92%8C%E7%BD%91%E7%BB%9C%E7%AE%97%E6%B3%95/" rel="next" title="MATLAB 图和网络算法（一）基本函数">
-                  MATLAB 图和网络算法（一）基本函数 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -510,7 +423,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
