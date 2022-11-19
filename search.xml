@@ -572,8 +572,6 @@ m_{ij}=\left\lbrace
 <h4 id="匹配对象方法-group-num-和-groups"><a href="#匹配对象方法-group-num-和-groups" class="headerlink" title="匹配对象方法 group(num) 和 groups()"></a>匹配对象方法 <code>group(num)</code> 和 <code>groups()</code></h4><h3 id="re-search"><a href="#re-search" class="headerlink" title="re.search"></a><code>re.search</code></h3>]]></content>
       <categories>
         <category>编程语言/工具</category>
-        <category>[object Object]</category>
-        <category>文本处理的一个小小实际问题。突然发现有其他紧急重要的事情。周一再更新。</category>
       </categories>
       <tags>
         <tag>Python</tag>
