@@ -509,8 +509,35 @@ m_{ij}=\left\lbrace
 <li>almost &#x2F; nearly &#x2F; most &#x2F; virtually &#x2F; practically</li>
 </ul>
 <hr>
+<p>预示</p>
 <ul>
-<li><input disabled="" type="checkbox"> <div title="外部的">externalized</div></li>
+<li>presage n. 预示；前兆；预感 v. 预示；预兆</li>
+<li>forecast n. &#x2F; v. 预测；预报</li>
+<li>foretell v. 预言；预示；预卜</li>
+<li>portend v. 预兆；预示</li>
+<li>prefigure v. 预示；预想</li>
+<li>bode v. 预示；是…的兆头</li>
+<li>auspice n. 预兆；前兆；吉兆</li>
+<li>harbinger n. 预兆；先兆</li>
+</ul>
+<hr>
+<ul>
+<li>cormorant n. 鸬鹚；贪婪的人 adj. 贪心的</li>
+<li>vulture n. 兀鹫；秃鹫；贪得无厌的人</li>
+<li>avaricious adj. 贪财的；贪婪的</li>
+<li>voracious  adj. 贪吃的；贪婪的；如饥似渴的</li>
+<li>rapacious adj. 贪婪的；贪得无厌的；劫掠的</li>
+<li>covetous adj. 贪心的；贪婪的；渴望的</li>
+<li>acquisitive adj. 渴望获得的；贪得无厌的</li>
+</ul>
+<hr>
+<ul>
+<li>maladroit adj. 笨拙的；不机敏的；笨手笨脚的 n. 一个笨拙愚蠢的人</li>
+<li>adroit adj. 熟练的；灵巧的<ul>
+<li>dexterous adj. 灵巧的（手）；熟练的；敏捷的</li>
+</ul>
+</li>
+<li>malign adj. 有害的；恶意的 v. 中伤；污蔑</li>
 </ul>
 <hr>
 ]]></content>
@@ -520,6 +547,25 @@ m_{ij}=\left\lbrace
       <tags>
         <tag>IELTS</tag>
         <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 正则表达式实际应用</title>
+    <url>/2022/11/19/%E7%94%A8Python-%E8%A7%A3%E5%86%B3%E4%B8%8B%E6%AD%A3%E9%81%87%E5%88%B0%E7%9A%84%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>这确实是我自己现在需要处理的事情……对于以下这段文本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">预示</span><br><span class="line"></span><br><span class="line">- presage n. 预示；前兆；预感 v. 预示；预兆</span><br><span class="line">- forecast n. / v. 预测；预报</span><br><span class="line">- foretell v. 预言；预示；预卜</span><br><span class="line">- portend v. 预兆；预示</span><br><span class="line">- prefigure v. 预示；预想</span><br><span class="line">- bode v. 预示；是...的兆头</span><br><span class="line">- auspice n. 预兆；前兆；吉兆</span><br><span class="line">- harbinger n. 预兆；先兆</span><br><span class="line">- propitious adj. 有利的；吉祥的；吉利的</span><br><span class="line">- portentous adj. 预示的；凶兆的；装腔作势的</span><br><span class="line"></span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+
+<p>希望每行单词能够变成这样的形式：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align:left;&quot;</span>&gt;</span>presage<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;float:right;&quot;</span>&gt;</span>n. 预示；前兆；预感 v. 预示；预兆<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其余每行保持不变。</p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="Python-正则表达式"><a href="#Python-正则表达式" class="headerlink" title="Python 正则表达式"></a>Python 正则表达式</h2><p>正则表达式是一个特殊的字符序列，它能帮助你方便的检查一个字符串是否与某种模式匹配。</p>
+<h3 id="re-match函数"><a href="#re-match函数" class="headerlink" title="re.match函数"></a>re.match函数</h3>]]></content>
+      <categories>
+        <category>编程语言/工具</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>文本处理</tag>
       </tags>
   </entry>
 </search>
