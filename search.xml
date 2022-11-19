@@ -494,7 +494,7 @@ m_{ij}=\left\lbrace
   <entry>
     <title>IELTS 日常积累 1/7</title>
     <url>/2022/11/19/IELTS-%E6%97%A5%E5%B8%B8%E7%A7%AF%E7%B4%AF-1-7/</url>
-    <content><![CDATA[<p>下周六首考雅思，希望一次性取得好成绩，虽然几乎是裸考。好好冲刺一周，记录一下吧。</p>
+    <content><![CDATA[<p>刚发现后天居然考雅思口语了。下周六考其他的。希望一次性取得好成绩，虽然几乎是裸考。记录一下这个超短冲刺。</p>
 <h1 id="单词-x2F-短语积累"><a href="#单词-x2F-短语积累" class="headerlink" title="单词&#x2F;短语积累"></a>单词&#x2F;短语积累</h1><hr>
 <ul>
 <li><p style="text-align:left;">turn a blind eye to<span style="float:right;">另一部分文字</span></p></li>
@@ -519,6 +519,8 @@ m_{ij}=\left\lbrace
 <li>bode v. 预示；是…的兆头</li>
 <li>auspice n. 预兆；前兆；吉兆</li>
 <li>harbinger n. 预兆；先兆</li>
+<li>propitious adj. 有利的；吉祥的；吉利的</li>
+<li>portentous adj. 预示的；凶兆的；装腔作势的</li>
 </ul>
 <hr>
 <ul>
@@ -558,10 +560,20 @@ m_{ij}=\left\lbrace
 <p>希望每行单词能够变成这样的形式：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align:left;&quot;</span>&gt;</span>presage<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;float:right;&quot;</span>&gt;</span>n. 预示；前兆；预感 v. 预示；预兆<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>其余每行保持不变。</p>
-<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="Python-正则表达式"><a href="#Python-正则表达式" class="headerlink" title="Python 正则表达式"></a>Python 正则表达式</h2><p>正则表达式是一个特殊的字符序列，它能帮助你方便的检查一个字符串是否与某种模式匹配。</p>
-<h3 id="re-match函数"><a href="#re-match函数" class="headerlink" title="re.match函数"></a>re.match函数</h3>]]></content>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="按行读取文件"><a href="#按行读取文件" class="headerlink" title="按行读取文件"></a>按行读取文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;file_path&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Python-正则表达式"><a href="#Python-正则表达式" class="headerlink" title="Python 正则表达式"></a>Python 正则表达式</h2><p>正则表达式是一个特殊的字符序列，它能帮助你方便的检查一个字符串是否与某种模式匹配。</p>
+<h3 id="re-match函数"><a href="#re-match函数" class="headerlink" title="re.match函数"></a><code>re.match</code>函数</h3><p>re.match 尝试从字符串的<strong>起始位置</strong>匹配一个模式。匹配成功 <code>re.match</code> 方法返回一个<strong>匹配的对象</strong>，否则返回 None。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">re.<span class="keyword">match</span>(pattern, string, flags=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="built_in">print</span>(re.<span class="keyword">match</span>(<span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>).span())  <span class="comment"># 在起始位置匹配 (.span() 表示区间) </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(re.<span class="keyword">match</span>(<span class="string">&#x27;com&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>))         <span class="comment"># 不在起始位置匹配</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="匹配对象方法-group-num-和-groups"><a href="#匹配对象方法-group-num-和-groups" class="headerlink" title="匹配对象方法 group(num) 和 groups()"></a>匹配对象方法 <code>group(num)</code> 和 <code>groups()</code></h4><h3 id="re-search"><a href="#re-search" class="headerlink" title="re.search"></a><code>re.search</code></h3>]]></content>
       <categories>
         <category>编程语言/工具</category>
+        <category>[object Object]</category>
+        <category>文本处理的一个小小实际问题。突然发现有其他紧急重要的事情。周一再更新。</category>
       </categories>
       <tags>
         <tag>Python</tag>
