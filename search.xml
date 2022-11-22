@@ -1256,9 +1256,9 @@
 </li>
 <li><p>re.MatchObject<br><code>group()</code> 返回被 RE 匹配的字符串。</p>
 <ul>
-<li>start() 返回匹配开始的位置</li>
-<li>end() 返回匹配结束的位置</li>
-<li>span() 返回一个元组包含匹配 (开始,结束) 的位置</li>
+<li><code>start()</code> 返回匹配开始的位置</li>
+<li><code>end()</code> 返回匹配结束的位置</li>
+<li><code>span()</code> 返回一个元组包含匹配 (开始,结束) 的位置</li>
 </ul>
 </li>
 </ul>
