@@ -552,35 +552,6 @@ m_{ij}=\left\lbrace
       </tags>
   </entry>
   <entry>
-    <title>Python 正则表达式实际应用</title>
-    <url>/2022/11/19/%E7%94%A8Python-%E8%A7%A3%E5%86%B3%E4%B8%8B%E6%AD%A3%E9%81%87%E5%88%B0%E7%9A%84%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>这确实是我自己现在需要处理的事情……对于以下这段文本：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">预示</span><br><span class="line"></span><br><span class="line">- presage n. 预示；前兆；预感 v. 预示；预兆</span><br><span class="line">- forecast n. / v. 预测；预报</span><br><span class="line">- foretell v. 预言；预示；预卜</span><br><span class="line">- portend v. 预兆；预示</span><br><span class="line">- prefigure v. 预示；预想</span><br><span class="line">- bode v. 预示；是...的兆头</span><br><span class="line">- auspice n. 预兆；前兆；吉兆</span><br><span class="line">- harbinger n. 预兆；先兆</span><br><span class="line">- propitious adj. 有利的；吉祥的；吉利的</span><br><span class="line">- portentous adj. 预示的；凶兆的；装腔作势的</span><br><span class="line"></span><br><span class="line">***</span><br></pre></td></tr></table></figure>
-
-<p>希望每行单词能够变成这样的形式：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align:left;&quot;</span>&gt;</span>presage<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;float:right;&quot;</span>&gt;</span>n. 预示；前兆；预感 v. 预示；预兆<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其余每行保持不变。</p>
-<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="按行读取文件"><a href="#按行读取文件" class="headerlink" title="按行读取文件"></a>按行读取文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;file_path&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines():</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="Python-正则表达式"><a href="#Python-正则表达式" class="headerlink" title="Python 正则表达式"></a>Python 正则表达式</h2><p>正则表达式是一个特殊的字符序列，它能帮助你方便的检查一个字符串是否与某种模式匹配。</p>
-<h3 id="re-match函数"><a href="#re-match函数" class="headerlink" title="re.match函数"></a><code>re.match</code>函数</h3><p>re.match 尝试从字符串的<strong>起始位置</strong>匹配一个模式。匹配成功 <code>re.match</code> 方法返回一个<strong>匹配的对象</strong>，否则返回 None。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">re.<span class="keyword">match</span>(pattern, string, flags=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="built_in">print</span>(re.<span class="keyword">match</span>(<span class="string">&#x27;www&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>).span())  <span class="comment"># 在起始位置匹配 (.span() 表示区间) </span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(re.<span class="keyword">match</span>(<span class="string">&#x27;com&#x27;</span>, <span class="string">&#x27;www.runoob.com&#x27;</span>))         <span class="comment"># 不在起始位置匹配</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">None</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="匹配对象方法-group-num-和-groups"><a href="#匹配对象方法-group-num-和-groups" class="headerlink" title="匹配对象方法 group(num) 和 groups()"></a>匹配对象方法 <code>group(num)</code> 和 <code>groups()</code></h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"> </span><br><span class="line">line = <span class="string">&quot;Cats are smarter than dogs&quot;</span></span><br><span class="line"><span class="comment"># .* 表示任意匹配除换行符（\n、\r）之外的任何单个或多个字符</span></span><br><span class="line"><span class="comment"># (.*?) 表示&quot;非贪婪&quot;模式，只保存第一个匹配到的子串</span></span><br><span class="line">matchObj = re.<span class="keyword">match</span>( <span class="string">r&#x27;(.*) are (.*?) .*&#x27;</span>, line, re.M|re.I)</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> matchObj:</span><br><span class="line">   <span class="built_in">print</span> (<span class="string">&quot;matchObj.group() : &quot;</span>, matchObj.group())</span><br><span class="line">   <span class="built_in">print</span> (<span class="string">&quot;matchObj.group(1) : &quot;</span>, matchObj.group(<span class="number">1</span>))</span><br><span class="line">   <span class="built_in">print</span> (<span class="string">&quot;matchObj.group(2) : &quot;</span>, matchObj.group(<span class="number">2</span>))</span><br><span class="line">   </span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">   <span class="built_in">print</span> (<span class="string">&quot;No match!!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="re-search方法"><a href="#re-search方法" class="headerlink" title="re.search方法"></a><code>re.search</code>方法</h3>]]></content>
-      <categories>
-        <category>编程语言/工具</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>文本处理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IELTS 口语 Part 1</title>
     <url>/2022/11/20/IELTS-%E5%8F%A3%E8%AF%AD-Part-1/</url>
     <content><![CDATA[<h1 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h1><h2 id="Part-1-Strategies-and-skills"><a href="#Part-1-Strategies-and-skills" class="headerlink" title="Part 1 - Strategies and skills"></a>Part 1 - Strategies and skills</h2><h3 id="Common-triggers-or-questions"><a href="#Common-triggers-or-questions" class="headerlink" title="Common triggers or questions"></a>Common triggers or questions</h3><p>The 6 most common triggers or questions in IELTS Speaking Part 1 are:</p>
