@@ -1688,16 +1688,53 @@
   <entry>
     <title>C++ 文件和流、正则表达式</title>
     <url>/2022/11/24/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%92%8C%E5%B7%A5%E5%85%B7/C-%E6%96%87%E4%BB%B6%E5%92%8C%E6%B5%81/</url>
-    <content><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>读取<code>data.txt</code>的数据，存储到<code>city</code>类中。</p>
+    <content><![CDATA[<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>读取<code>data.txt</code>的数据，存储到<code>AQCondition</code>类中。</p>
 <h2 id="data-txt"><a href="#data-txt" class="headerlink" title="data.txt"></a><code>data.txt</code></h2><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">320600	南通	--	43	Ⅰ	优	2006	12	31</span><br><span class="line">320600	南通	--	40	Ⅰ	优	2006	12	30</span><br><span class="line">320600	南通	可吸入颗粒物	55	Ⅱ	良	2006	12	29</span><br><span class="line">320600	南通	可吸入颗粒物	51	Ⅱ	良	2006	12	28</span><br><span class="line">320600	南通	可吸入颗粒物	75	Ⅱ	良	2006	12	27</span><br><span class="line">320600	南通	可吸入颗粒物	61	Ⅱ	良	2006	12	26</span><br><span class="line">320600	南通	可吸入颗粒物	72	Ⅱ	良	2006	12	25</span><br><span class="line">320600	南通	可吸入颗粒物	113	Ⅲ1	轻微污染	2006	12	24</span><br><span class="line">320600	南通	可吸入颗粒物	154	Ⅲ2	轻度污染	2006	12	23</span><br><span class="line">320600	南通	可吸入颗粒物	130	Ⅲ1	轻微污染	2006	12	22</span><br><span class="line">320600	南通	可吸入颗粒物	143	Ⅲ1	轻微污染	2006	12	21</span><br><span class="line">320600	南通	可吸入颗粒物	93	Ⅱ	良	2006	12	20</span><br><span class="line">320600	南通	二氧化氮	93	Ⅱ	良	2006	12	19</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
 <h2 id="class-airCondition"><a href="#class-airCondition" class="headerlink" title="class airCondition"></a><code>class airCondition</code></h2><p>空气质量状况对象包括城市代码、城市名称、首要污染物、污染指数、污染物级别、空气状况、年、月、日。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">AQCondition</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string num;</span><br><span class="line">    string name;</span><br><span class="line">    string primaryPollutant;</span><br><span class="line">    <span class="type">int</span> index;</span><br><span class="line">    string degree;</span><br><span class="line">    <span class="type">int</span> year;</span><br><span class="line">    <span class="type">int</span> month;</span><br><span class="line">    <span class="type">int</span> day;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">AQCondition</span>() &#123;&#125;</span><br><span class="line">    <span class="built_in">AQCondition</span>(string num, string name, string prPoll, <span class="type">int</span> index, string d, <span class="type">int</span> y, <span class="type">int</span> m, <span class="type">int</span> d) : <span class="built_in">num</span>(num), <span class="built_in">name</span>(name), <span class="built_in">primaryPollutant</span>(prPoll), <span class="built_in">index</span>(index), <span class="built_in">degree</span>(d), <span class="built_in">year</span>(y), <span class="built_in">month</span>(m), <span class="built_in">day</span>(d) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">AQCondition</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    string num;</span><br><span class="line">    string name;</span><br><span class="line">    string primaryPollutant;</span><br><span class="line">    <span class="type">int</span> index;</span><br><span class="line">    string degree;</span><br><span class="line">    <span class="type">int</span> year;</span><br><span class="line">    <span class="type">int</span> month;</span><br><span class="line">    <span class="type">int</span> day;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">AQCondition</span>() &#123;&#125;</span><br><span class="line">    <span class="built_in">AQCondition</span>(string num, string name, string prPoll, <span class="type">int</span> index, string d, <span class="type">int</span> y, <span class="type">int</span> m, <span class="type">int</span> d) : <span class="built_in">num</span>(num), <span class="built_in">name</span>(name), <span class="built_in">primaryPollutant</span>(prPoll), <span class="built_in">index</span>(index), <span class="built_in">degree</span>(d), <span class="built_in">year</span>(y), <span class="built_in">month</span>(m), <span class="built_in">day</span>(d) &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="标准库简介"><a href="#标准库简介" class="headerlink" title="标准库简介"></a>标准库简介</h1><h2 id="fstream"><a href="#fstream" class="headerlink" title="fstream"></a><code>fstream</code></h2><p>标准库 fstream，它定义了三个新的数据类型：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ofstream</code></td>
+<td>该数据类型表示输出文件流，用于创建文件并向文件写入信息。</td>
+</tr>
+<tr>
+<td><code>ifstream</code></td>
+<td>该数据类型表示输入文件流，用于从文件读取信息。</td>
+</tr>
+<tr>
+<td><code>fstream</code></td>
+<td>该数据类型通常表示文件流，且同时具有 <code>ofstream</code> 和 <code>ifstream</code> 两种功能，这意味着它可以创建文件，向文件写入信息，从文件读取信息。</td>
+</tr>
+</tbody></table>
+<h2 id="regex库"><a href="#regex库" class="headerlink" title="regex库"></a><code>regex</code>库</h2><p>C++ 的 regex 库提供了用于表示正则表达式和匹配结果的基本类型，以及使用这些基本类型作为参数或返回结果（通过参数来返回，不是函数的返回值）的搜寻、匹配、替换等函数。</p>
+<p><code>basic_regex</code>及其实例化类型<code>regex</code>、<code>wregex</code></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> basic_regex&lt;<span class="type">char</span>&gt;       regex;</span><br><span class="line"><span class="keyword">typedef</span> basic_regex&lt;<span class="type">wchar_t</span>&gt;    wregex;</span><br><span class="line"><span class="comment">// 构造函数一般接受一个字符串作为参数，还有一个默认参数 flags</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>编程语言/工具</category>
       </categories>
       <tags>
         <tag>C/C++</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>大三上半学期物理专业课考试再次延期，近期杂感</title>
+    <url>/2022/11/29/%E5%A4%A7%E4%B8%89%E4%B8%8A%E5%8D%8A%E5%AD%A6%E6%9C%9F%E7%89%A9%E7%90%86%E4%B8%93%E4%B8%9A%E8%AF%BE%E8%80%83%E8%AF%95%E5%86%8D%E6%AC%A1%E5%BB%B6%E6%9C%9F%EF%BC%8C%E8%BF%91%E6%9C%9F%E6%9D%82%E6%84%9F/</url>
+    <content><![CDATA[<p>最近因为一些众所周知的事件，我的梯子非常不好用。</p>
+<p>因为物理学专业课三门课期末考试都延期了，因此我的空闲时间多了起来。预计约有一周可以用于自由支配。然后就要准备其他课程的期末考试。</p>
+<p>这一周做些什么呢。因为买了非常著名的《算法导论》和《深入理解计算机系统》，两本很厚的书，想尽可能读一下。</p>
+<p>大一刚入学修读《中国古代史学经典选读I》这门课时，姜海军老师说他大学时候非常有通宵读书的经历，并说大学不通宵读一本书会是遗憾。我大一上学期爱上了这种深夜读书的感觉，但没有通宵，只在熄灯后到凌晨一二点，毕竟第二天还要上课。在黑暗静谧的被窝里，看灯光温和泛黄的电子书是我那时每天的精神慰藉。马克斯·韦伯的《新教伦理与资本主义精神》、《学术与政治》到鲍曼的《现代性与大屠杀》，读这三本书是艰难的，但这它们深深地塑造了我整个大学阶段的判断和选择。</p>
+<p>我清晰地明白认知如何决定我们的人生，读这些经典的人文社科书籍又如何深深塑造着我们的认知。但上学期开始，我越来越焦虑。我不再能静下心看这些“杂书”。我不知道我怎么了。是大环境使然吗？是现在的客观条件让人无法诗意地栖居吗？我不知道。近期的一系列大事件，冲击着我，让我好像能与自己和解了。</p>
+<p>今晚便想读一读《深入理解计算机系统》这本书，试试，能不能看到上头，通宵读下去呢？</p>
+]]></content>
   </entry>
 </search>
