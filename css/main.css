@@ -2875,7 +2875,6 @@ mjx-container[display='true'] + br {
   position: -webkit-sticky;
   position: sticky;
   top: 12px;
-  visibility: hidden;
 }
 @media (max-width: 991px) {
   .sidebar {
